@@ -1,4 +1,4 @@
-# SarinApp
+# SarinApp - Work in Progress
 Sarin for MacOS: Beginner's Network Penetration Testing GUI (Dsniff)
 - Automatically builds and installs dsniff + dependencies
 - Automatically installs Sarin Scripts

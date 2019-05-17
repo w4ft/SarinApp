@@ -839,15 +839,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="Uncompleted Status" id="oh7-sx-ltQ"/>
                             </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jej-Nm-c3Z">
-                                <rect key="frame" x="90" y="229" width="339" height="17"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Installing libnet, libnids, libpcap, and openssl via brew..." id="Wyb-Qo-av5">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mb8-KR-lol">
                                 <rect key="frame" x="91" y="169" width="278" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -879,6 +870,15 @@
                                 <rect key="frame" x="239" y="37" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jej-Nm-c3Z">
+                                <rect key="frame" x="91" y="229" width="339" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Installing libnet, libnids, libpcap, and openssl via brew..." id="Wyb-Qo-av5">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -987,9 +987,6 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
-                                <connections>
-                                    <action selector="usernameTextField:" target="sw1-Zw-Qa8" id="Eth-Kc-KRz"/>
-                                </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hr2-2b-Uza">
                                 <rect key="frame" x="37" y="194" width="217" height="22"/>
@@ -1020,7 +1017,111 @@
                 </viewController>
                 <customObject id="lhx-EM-wYX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1560" y="807.5"/>
+            <point key="canvasLocation" x="2337" y="808"/>
+        </scene>
+        <!--Important View Controller-->
+        <scene sceneID="cjM-bT-tmC">
+            <objects>
+                <viewController storyboardIdentifier="ImportantViewController" id="1hk-g8-Cci" customClass="ImportantViewController" customModule="Sarin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Rtl-gz-rm6">
+                        <rect key="frame" x="0.0" y="0.0" width="708" height="447"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="984-Uj-DTn">
+                                <rect key="frame" x="38" y="340" width="261" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Important!" id="zJm-zt-9H4">
+                                    <font key="font" metaFont="systemHeavy" size="50"/>
+                                    <color key="textColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="29L-3U-5hw">
+                                <rect key="frame" x="39" y="9" width="181" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" title="Continue" bezelStyle="rounded" image="Rectangle" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="KtY-sS-GsI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemSemibold" size="15"/>
+                                </buttonCell>
+                                <color key="contentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="continueButtonPressed:" target="1hk-g8-Cci" id="fj5-P9-TaP"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g1o-ED-2cA" userLabel="Body Label">
+                                <rect key="frame" x="38" y="285" width="525" height="38"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" title="Please manually install the following before continuing." id="3uT-iO-5eE">
+                                    <font key="font" metaFont="systemSemibold" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tai-sW-yDf" userLabel="Body Label">
+                                <rect key="frame" x="37" y="219" width="435" height="38"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" title="Install Xcode Commandline Tools" id="rBN-7k-oUt">
+                                    <font key="font" metaFont="systemSemibold" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="co1-MP-J3L" userLabel="Body Label">
+                                <rect key="frame" x="38" y="253" width="434" height="38"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" title="Open Terminal.app, copy/paste, run, and follow the prompt." id="Iq7-bh-gZT">
+                                    <font key="font" metaFont="system" size="15"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qpZ-iZ-esV" userLabel="Body Label">
+                                <rect key="frame" x="37" y="89" width="613" height="38"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" borderStyle="bezel" title="/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;" bezelStyle="round" id="ije-oV-tdr">
+                                    <font key="font" metaFont="systemSemibold" size="12"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYz-LB-Fpl" userLabel="Body Label">
+                                <rect key="frame" x="38" y="179" width="173" height="38"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" borderStyle="bezel" title="xcode-select --install" bezelStyle="round" id="1rd-Kb-BJN">
+                                    <font key="font" metaFont="systemSemibold" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DvQ-Db-4Z5" userLabel="Body Label">
+                                <rect key="frame" x="38" y="133" width="200" height="38"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" title="Install Homebrew" id="w8D-tZ-XhP">
+                                    <font key="font" metaFont="systemSemibold" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vTp-FH-5ul">
+                                <rect key="frame" x="242" y="36" width="91" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Not Installed!" id="Srd-lO-HYL">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="homebrewText" destination="qpZ-iZ-esV" id="E6i-ik-iuk"/>
+                        <outlet property="notInstalledText" destination="vTp-FH-5ul" id="cFr-NP-Kfx"/>
+                        <outlet property="xcodeText" destination="qpZ-iZ-esV" id="SGe-E5-mgF"/>
+                    </connections>
+                </viewController>
+                <customObject id="vFd-th-0ik" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1561" y="807.5"/>
         </scene>
     </scenes>
     <resources>

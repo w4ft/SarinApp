@@ -24,8 +24,8 @@ class WelcomeViewController: NSViewController {
     
     var buttoncount:Int = 0
     
-    lazy var SetupViewController: NSViewController = {
-        return self.storyboard!.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("SetupViewController"))
+    lazy var ImportantViewController: NSViewController = {
+        return self.storyboard!.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("ImportantViewController"))
             as! NSViewController
     }()
     
@@ -33,8 +33,8 @@ class WelcomeViewController: NSViewController {
         //Set Labels and Button to Setup Page
         if buttoncount == 0{
             
-            SetupViewController.preferredContentSize = CGSize(width: 708, height: 447)
-            self.presentAsSheet(SetupViewController)
+            ImportantViewController.preferredContentSize = CGSize(width: 708, height: 447)
+            self.presentAsSheet(ImportantViewController)
             titleLabel.stringValue = "You are all set!"
             secondaryHeaderLabel.isHidden = true
             bodyLabel.isHidden = true

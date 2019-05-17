@@ -11,6 +11,7 @@
 		2077595438989A968580D735 /* Pods_Sarin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561844C932D580A32CBC771A /* Pods_Sarin.framework */; };
 		26BA0BA052B220AF951F1FF1 /* Pods_SarinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5995A634D3526B4C71470AAB /* Pods_SarinTests.framework */; };
 		9D9A3033228B8999003A8739 /* bashFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9A3032228B8999003A8739 /* bashFunctions.swift */; };
+		9DD5BA87228E2A17000BEE54 /* ImportantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD5BA86228E2A17000BEE54 /* ImportantViewController.swift */; };
 		9DD62D1A22885C4800FA3CAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD62D1922885C4800FA3CAA /* AppDelegate.swift */; };
 		9DD62D1C22885C4800FA3CAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD62D1B22885C4800FA3CAA /* ViewController.swift */; };
 		9DD62D1E22885C4A00FA3CAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD62D1D22885C4A00FA3CAA /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		5995A634D3526B4C71470AAB /* Pods_SarinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SarinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		796B011FC4ACF70B4841DC2F /* Pods-SarinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SarinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SarinTests/Pods-SarinTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D9A3032228B8999003A8739 /* bashFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bashFunctions.swift; sourceTree = "<group>"; };
+		9DD5BA86228E2A17000BEE54 /* ImportantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantViewController.swift; sourceTree = "<group>"; };
 		9DD62D1622885C4800FA3CAA /* Sarin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sarin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD62D1922885C4800FA3CAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DD62D1B22885C4800FA3CAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				92BB7806BF6669BCC9E64133 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		9DD62D1722885C4800FA3CAA /* Products */ = {
 			isa = PBXGroup;
@@ -146,6 +149,7 @@
 			children = (
 				9DD62D1922885C4800FA3CAA /* AppDelegate.swift */,
 				9DD62D1B22885C4800FA3CAA /* ViewController.swift */,
+				9DD5BA86228E2A17000BEE54 /* ImportantViewController.swift */,
 				9DD62D45228860B300FA3CAA /* WelcomeViewController.swift */,
 				9DFC9AB5228B705C0023779B /* SetupViewController.swift */,
 				9DD62D4722886A6D00FA3CAA /* InstallViewController.swift */,
@@ -404,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD5BA87228E2A17000BEE54 /* ImportantViewController.swift in Sources */,
 				9DD62D4922886A6D00FA3CAA /* InstallViewController.swift in Sources */,
 				9D9A3033228B8999003A8739 /* bashFunctions.swift in Sources */,
 				9DD62D1C22885C4800FA3CAA /* ViewController.swift in Sources */,
@@ -577,17 +582,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sarin/Sarin.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = LWUG28EFDW;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Sarin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = w4ft.Sarin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -598,17 +605,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sarin/Sarin.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = LWUG28EFDW;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Sarin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = w4ft.Sarin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

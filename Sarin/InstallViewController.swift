@@ -27,6 +27,8 @@ class InstallViewController: NSViewController {
     
     let location:String = defaults.string(forKey: "installLocation")!
     
+    let keychain = Keychain(service: "Sarin")
+    
     
     func gitCloneSarin(){
         let task = Process.init()
@@ -118,7 +120,7 @@ class InstallViewController: NSViewController {
     func installDsniff(){
         let task = Process.init()
         task.launchPath = "/bin/bash"
-        task.arguments = ["--login",location+"/Sarin/sarin_scripts/install.sh",location+"/Sarin/dsniff"]
+        task.arguments = ["--login",location+"/Sarin/sarin_scripts/install.sh",location+"/Sarin/dsniff",keychain[NSUserName()]!]
         task.launch()
         let group = DispatchGroup()
         group.enter()
@@ -162,7 +164,7 @@ class InstallViewController: NSViewController {
         progressIndicator.startAnimation(self)
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "isInstalled")
-        let keychain = Keychain(service: "Sarin")
+        
         print(executeBashWithOutput(scriptLocation: location+"/Sarin/sarin_scripts/checkPaths.sh", param1: ""))
         if !(executeBashWithOutput(scriptLocation: location+"/Sarin/sarin_scripts/checkPaths.sh", param1: "").contains("azazaz")){
             _ = executeSudoBashWithOutput(scriptLocation: location+"/Sarin/sarin_scripts/addPaths.sh", param1: "", param2: "", param3: "", username: NSUserName(), password: keychain[NSUserName()]!)

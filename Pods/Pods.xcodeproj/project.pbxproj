@@ -62,7 +62,7 @@
 /* Begin PBXFileReference section */
 		0009B07FDE5E21723DF56C679BC15254 /* Pods-SarinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SarinUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0C1BC787E30B0E4B875DC941722337C2 /* KeychainSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeychainSwift-Info.plist"; sourceTree = "<group>"; };
-		11B24834B1198360FECB29F7D08F46E5 /* Pods_SarinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SarinTests.framework; path = "Pods-SarinTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11B24834B1198360FECB29F7D08F46E5 /* Pods_SarinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SarinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1257B5D0AB075E1C062D94663BC7C434 /* KeychainAccess-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeychainAccess-Info.plist"; sourceTree = "<group>"; };
 		136F999B9C899EE49034D808284A0D38 /* Pods-Sarin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Sarin.modulemap"; sourceTree = "<group>"; };
 		14AF4F4758CB68744A24301577F9C460 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 		7E0F30CAEE9A1957D57968B5EE00AFE7 /* KeychainSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainSwift.xcconfig; sourceTree = "<group>"; };
 		7F01D19AC6039FB6F05EFB9A82361F8C /* TegKeychainConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TegKeychainConstants.swift; path = Sources/TegKeychainConstants.swift; sourceTree = "<group>"; };
 		8B5A5078B6208F5D65F998398F18A7CA /* Pods-Sarin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sarin.release.xcconfig"; sourceTree = "<group>"; };
-		9A047E567570A38EEEB624F1A4926511 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainAccess.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A047E567570A38EEEB624F1A4926511 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB023608018A2BC1460A0E7EAEB76445 /* Pods-SarinUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SarinUITests.modulemap"; sourceTree = "<group>"; };
 		BFED66C4CB36B67D81D082E9143BC164 /* Pods-SarinTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SarinTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C29CFFB58CD3F8EB602BDC96F02465C3 /* Pods-SarinUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SarinUITests-Info.plist"; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		D6224309328A819BDB1FBECB11D7E5A0 /* KeychainSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainSwift.modulemap; sourceTree = "<group>"; };
 		DC3D304C2C23B36496FD4F753EE89291 /* KeychainSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-prefix.pch"; sourceTree = "<group>"; };
 		DDACC3DB748149E219063C2B64AB85F1 /* Pods-Sarin-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sarin-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E5AA3A460158E12B50C199FFDB53E462 /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainSwift.framework; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5AA3A460158E12B50C199FFDB53E462 /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAC3421F8BE3441699EE07D2BE28C6F /* Pods-SarinTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SarinTests.modulemap"; sourceTree = "<group>"; };
 		EE1E00F37180210D1EB0BEAD4820456C /* Pods-SarinTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SarinTests-umbrella.h"; sourceTree = "<group>"; };
 		EFBA407E026473AA114B154F69E4A0A6 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = Sources/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 		F5C7A3E3E32976DB50BC871F74E32526 /* Pods-Sarin-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sarin-Info.plist"; sourceTree = "<group>"; };
 		F755DFDA9B6710EE9F7D698A520CAEA3 /* Pods-SarinUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SarinUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		FB3121DC58D61F5CE8A4EF824BE7AD01 /* Pods_SarinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SarinUITests.framework; path = "Pods-SarinUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD99872AF4F9BA87268CDCA61BB1D801 /* Pods_Sarin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sarin.framework; path = "Pods-Sarin.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB3121DC58D61F5CE8A4EF824BE7AD01 /* Pods_SarinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SarinUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD99872AF4F9BA87268CDCA61BB1D801 /* Pods_Sarin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sarin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3C9E3EDABC8B8C26E588F2F291189C /* Pods-SarinTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SarinTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,7 +216,6 @@
 				14AF4F4758CB68744A24301577F9C460 /* Keychain.swift */,
 				2B5185B407D54546996612D4C010D5F8 /* Support Files */,
 			);
-			name = KeychainAccess;
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
@@ -297,7 +296,6 @@
 				7F01D19AC6039FB6F05EFB9A82361F8C /* TegKeychainConstants.swift */,
 				35BAE5576F6F65D1F5DF285CF6FEC721 /* Support Files */,
 			);
-			name = KeychainSwift;
 			path = KeychainSwift;
 			sourceTree = "<group>";
 		};
@@ -599,13 +597,15 @@
 			baseConfigurationReference = 174178330E100AE1D5F3BE18E7E342A6 /* KeychainAccess.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LWUG28EFDW;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -622,6 +622,7 @@
 				MODULEMAP_FILE = "Target Support Files/KeychainAccess/KeychainAccess.modulemap";
 				PRODUCT_MODULE_NAME = KeychainAccess;
 				PRODUCT_NAME = KeychainAccess;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -956,13 +957,15 @@
 			baseConfigurationReference = 174178330E100AE1D5F3BE18E7E342A6 /* KeychainAccess.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LWUG28EFDW;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -979,6 +982,7 @@
 				MODULEMAP_FILE = "Target Support Files/KeychainAccess/KeychainAccess.modulemap";
 				PRODUCT_MODULE_NAME = KeychainAccess;
 				PRODUCT_NAME = KeychainAccess;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";

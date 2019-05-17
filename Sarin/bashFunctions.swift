@@ -44,8 +44,24 @@ do shell script "bash
     let output = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
     
     return output! as String
+}
+
+func executeCommandWithOutput(command:String) -> String{
+    let task = Process()
+    let pipe = Pipe()
+    let script = """
+    do shell script "
+    """ + command + """
+    "
+    """
+    task.launchPath = "/usr/bin/osascript"
+    task.arguments = ["-e",script]
+    task.standardOutput = pipe
+    task.launch()
+    let data = pipe.fileHandleForReading.readDataToEndOfFile()
+    let output = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
     
-    
+    return output! as String
 }
 
 func executeSudoBashWithOutput(scriptLocation: String, param1: String, param2: String, param3: String, username: String, password:String) -> String{

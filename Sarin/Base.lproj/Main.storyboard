@@ -754,7 +754,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MBl-fE-Xdi" userLabel="Body Label">
-                                <rect key="frame" x="37" y="83" width="404" height="125"/>
+                                <rect key="frame" x="37" y="145" width="404" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" selectable="YES" id="Zch-G8-CxM">
                                     <font key="font" metaFont="systemSemibold" size="15"/>
@@ -767,21 +767,11 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3pW-HX-Lxe">
-                                <rect key="frame" x="37" y="230" width="438" height="48"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" selectable="YES" alignment="left" title="Before proceeding, please manually install Homebrew if not already installed. Visit https://brew.sh for instructions." id="a3P-Om-bGL">
-                                    <font key="font" metaFont="system" size="15"/>
-                                    <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="blueButton" destination="Yzy-AQ-Cof" id="lIb-Qe-UzB"/>
                         <outlet property="bodyLabel" destination="MBl-fE-Xdi" id="2bh-o1-Kpd"/>
-                        <outlet property="disclaimerLabel" destination="3pW-HX-Lxe" id="YPS-Yv-ICF"/>
                         <outlet property="secondaryHeaderLabel" destination="G7a-YL-DOB" id="YUv-iR-AdQ"/>
                         <outlet property="titleLabel" destination="cI9-P3-I4t" id="Ox8-dn-Ea5"/>
                     </connections>

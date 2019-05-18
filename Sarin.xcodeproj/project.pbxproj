@@ -10,6 +10,8 @@
 		11FCE98A62C0D1271A43D543 /* Pods_SarinUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D9222D7791AB5312B873F2 /* Pods_SarinUITests.framework */; };
 		2077595438989A968580D735 /* Pods_Sarin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561844C932D580A32CBC771A /* Pods_Sarin.framework */; };
 		26BA0BA052B220AF951F1FF1 /* Pods_SarinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5995A634D3526B4C71470AAB /* Pods_SarinTests.framework */; };
+		9D24177E22908B87008FF3BF /* mainFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24177D22908B87008FF3BF /* mainFunctions.swift */; };
+		9D8C943A2290B97A00847F42 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C94392290B97A00847F42 /* PreferencesViewController.swift */; };
 		9D9A3033228B8999003A8739 /* bashFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9A3032228B8999003A8739 /* bashFunctions.swift */; };
 		9DD5BA87228E2A17000BEE54 /* ImportantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD5BA86228E2A17000BEE54 /* ImportantViewController.swift */; };
 		9DD62D1A22885C4800FA3CAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD62D1922885C4800FA3CAA /* AppDelegate.swift */; };
@@ -47,6 +49,8 @@
 		561844C932D580A32CBC771A /* Pods_Sarin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sarin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5995A634D3526B4C71470AAB /* Pods_SarinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SarinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		796B011FC4ACF70B4841DC2F /* Pods-SarinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SarinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SarinTests/Pods-SarinTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D24177D22908B87008FF3BF /* mainFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainFunctions.swift; sourceTree = "<group>"; };
+		9D8C94392290B97A00847F42 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		9D9A3032228B8999003A8739 /* bashFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bashFunctions.swift; sourceTree = "<group>"; };
 		9DD5BA86228E2A17000BEE54 /* ImportantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantViewController.swift; sourceTree = "<group>"; };
 		9DD62D1622885C4800FA3CAA /* Sarin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sarin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +162,8 @@
 				9DD62D1F22885C4A00FA3CAA /* Main.storyboard */,
 				9DD62D2222885C4A00FA3CAA /* Info.plist */,
 				9DD62D2322885C4A00FA3CAA /* Sarin.entitlements */,
+				9D24177D22908B87008FF3BF /* mainFunctions.swift */,
+				9D8C94392290B97A00847F42 /* PreferencesViewController.swift */,
 			);
 			path = Sarin;
 			sourceTree = "<group>";
@@ -410,8 +416,10 @@
 			files = (
 				9DD5BA87228E2A17000BEE54 /* ImportantViewController.swift in Sources */,
 				9DD62D4922886A6D00FA3CAA /* InstallViewController.swift in Sources */,
+				9D8C943A2290B97A00847F42 /* PreferencesViewController.swift in Sources */,
 				9D9A3033228B8999003A8739 /* bashFunctions.swift in Sources */,
 				9DD62D1C22885C4800FA3CAA /* ViewController.swift in Sources */,
+				9D24177E22908B87008FF3BF /* mainFunctions.swift in Sources */,
 				9DD62D46228860B300FA3CAA /* WelcomeViewController.swift in Sources */,
 				9DD62D1A22885C4800FA3CAA /* AppDelegate.swift in Sources */,
 				9DFC9AB7228B705C0023779B /* SetupViewController.swift in Sources */,

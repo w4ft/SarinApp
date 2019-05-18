@@ -21,7 +21,7 @@ class InstallViewController: NSViewController {
     }
     
     override func viewDidAppear() {
-        gitCloneSarin()
+        gitCloneSarin() //calls catalyric function
     }
     
     
@@ -29,7 +29,7 @@ class InstallViewController: NSViewController {
     
     let keychain = Keychain(service: "Sarin")
     
-    
+    //Start of catalytic function to install Dsniff
     func gitCloneSarin(){
         let task = Process.init()
         task.launchPath = "/usr/bin/git"
@@ -70,7 +70,7 @@ class InstallViewController: NSViewController {
     func gitCloneDsniff(){
         let task = Process.init()
         task.launchPath = "/usr/bin/git"
-        task.arguments = ["clone", "https://github.com/ggreer/dsniff.git",location+"/Sarin/dsniff"]
+        task.arguments = ["clone", "https://github.com/ggreer/dsniff.git",location+"/dsniff"]
         task.launch()
         let group = DispatchGroup()
         group.enter()
@@ -88,7 +88,7 @@ class InstallViewController: NSViewController {
     func compileDsniff(){
         let task = Process.init()
         task.launchPath = "/bin/bash"
-        task.arguments = ["--login",location+"/Sarin/sarin_scripts/compile.sh",location+"/Sarin/dsniff"]
+        task.arguments = ["--login",location+"/Sarin/sarin_scripts/compile.sh",location+"/dsniff"]
         task.launch()
         let group = DispatchGroup()
         group.enter()
@@ -104,7 +104,7 @@ class InstallViewController: NSViewController {
     func makeDsniff(){
         let task = Process.init()
         task.launchPath = "/bin/bash"
-        task.arguments = ["--login",location+"/Sarin/sarin_scripts/make.sh",location+"/Sarin/dsniff"]
+        task.arguments = ["--login",location+"/Sarin/sarin_scripts/make.sh",location+"/dsniff"]
         task.launch()
         let group = DispatchGroup()
         group.enter()
@@ -120,7 +120,7 @@ class InstallViewController: NSViewController {
     func installDsniff(){
         let task = Process.init()
         task.launchPath = "/bin/bash"
-        task.arguments = ["--login",location+"/Sarin/sarin_scripts/install.sh",location+"/Sarin/dsniff",keychain[NSUserName()]!]
+        task.arguments = ["--login",location+"/Sarin/sarin_scripts/install.sh",location+"/dsniff",keychain[NSUserName()]!]
         task.launch()
         let group = DispatchGroup()
         group.enter()
@@ -136,13 +136,9 @@ class InstallViewController: NSViewController {
 
         }
     }
-    
-    
-    
-
-   
-    
-    
+    //End of catalytic function
+ 
+    //Outlets
     @IBOutlet weak var progressIndicator: NSProgressIndicator!
     @IBOutlet weak var statusOfSarinScripts: NSImageView!
     @IBOutlet weak var statusOfDependencies: NSImageView!
@@ -151,11 +147,8 @@ class InstallViewController: NSViewController {
     @IBOutlet weak var finishButton: NSButton!
     @IBOutlet weak var titleLabel: NSTextField!
     @IBOutlet weak var cloneSarinLabel: NSTextField!
-    
     @IBOutlet weak var installDependenciesLabel: NSTextField!
-    
     @IBOutlet weak var cloneDsniffLabel: NSTextField!
-    
     @IBOutlet weak var installDsniffLabel: NSTextField!
     
     @IBAction func finishPressed(_ sender: Any) {
@@ -165,6 +158,7 @@ class InstallViewController: NSViewController {
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "isInstalled")
         
+        //Check if correct paths are written, if not, writes them
         print(executeBashWithOutput(scriptLocation: location+"/Sarin/sarin_scripts/checkPaths.sh", param1: ""))
         if !(executeBashWithOutput(scriptLocation: location+"/Sarin/sarin_scripts/checkPaths.sh", param1: "").contains("azazaz")){
             _ = executeSudoBashWithOutput(scriptLocation: location+"/Sarin/sarin_scripts/addPaths.sh", param1: "", param2: "", param3: "", username: NSUserName(), password: keychain[NSUserName()]!)

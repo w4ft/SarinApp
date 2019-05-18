@@ -8,6 +8,7 @@ target 'Sarin' do
   # Pods for Sarin
 
   pod 'KeychainSwift'
+  pod 'Preferences'
   pod 'KeychainAccess'
   target 'SarinTests' do
     inherit! :search_paths

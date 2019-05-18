@@ -3,38 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F65920658F39FEF273AE506DB361D94 /* KeychainSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DC3B3C77B62F7E78A7A3EB2083307A5 /* KeychainSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		453F83EED06FF06F51F299AEB2EE2904 /* KeychainAccess-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9650E992A2415742CF079602A0D2 /* KeychainAccess-dummy.m */; };
+		09BA19D848CE57090FA00F3BFB87238F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		3F65920658F39FEF273AE506DB361D94 /* KeychainSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65055E48B9918C5E024D9510975B18D9 /* KeychainSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		453F83EED06FF06F51F299AEB2EE2904 /* KeychainAccess-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D96175E47679AC3D83A51A742C72AA /* KeychainAccess-dummy.m */; };
 		4C43BC17ABA7AD669225B94E0DB6178A /* Pods-SarinTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF5CF38A499D5CD90ABFF0F0A89D8C /* Pods-SarinTests-dummy.m */; };
 		4D48A9A3C972EF84958182CB05E669B9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
-		4FB8F7D3BBCBA231146C068266DC212A /* Pods-Sarin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4512178981A7C358E97DC7BF4F0994A /* Pods-Sarin-dummy.m */; };
 		63E7D0C30D5DEF369251F5C45792951E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
-		6E58DDD8D3D8297569A811D04C41832D /* Pods-Sarin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5104ECAFBB643599A7FA2ED9CA15A5F5 /* Pods-Sarin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72B5AC62E24A8AED8AF73E58D6AB0DAC /* KeychainSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D817EED99CF5F91813B9B035CCF02FE /* KeychainSwift-dummy.m */; };
-		836944E66F58858F1E48D9ACC9F9D5BC /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDEB64D4A75FA2F3FE745185B0E03F /* KeychainSwift.swift */; };
-		8BE33011FF9D4828D64750C47329B381 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		6683CF7B61BB8DE1BC8BCC68AFFBFCBF /* Preferenceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D3A1D9B4DB83A4F4A97D7A9F7620 /* Preferenceable.swift */; };
+		6B69C47EC67F7F9C69D17D6593338973 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9495288C8BB03D363646F21674441D /* util.swift */; };
+		72B5AC62E24A8AED8AF73E58D6AB0DAC /* KeychainSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EEED22213F4C1CAB2346508C72059F /* KeychainSwift-dummy.m */; };
+		836944E66F58858F1E48D9ACC9F9D5BC /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A93002777EE036996360319DFA5A5F /* KeychainSwift.swift */; };
 		8DF57262CE05B96379EDF906E2359AC0 /* Pods-SarinUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 708D61BF9C4F326F978621D1A2212917 /* Pods-SarinUITests-dummy.m */; };
-		92B9A2B19BE39566C6CACFD26BF134C4 /* KeychainAccess-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D2953E17A9F30225AD895B26E33949E /* KeychainAccess-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92B9A2B19BE39566C6CACFD26BF134C4 /* KeychainAccess-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B53DD247416D21C9600120C6243A1E77 /* KeychainAccess-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B47921A33874EB798FC49585F870D934 /* Pods-Sarin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5104ECAFBB643599A7FA2ED9CA15A5F5 /* Pods-Sarin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB6DA87EF2600E6C541F2FE1528390EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
 		BC69C92070C83BE2E700EB47CB97404A /* Pods-SarinUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2BF1B28C1AD26197C5E84BB86FCE9D9 /* Pods-SarinUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD679E01B668D0C6594201643B4C28A5 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF4F4758CB68744A24301577F9C460 /* Keychain.swift */; };
+		C8B65C96BD7DB8B744C27B105B7D4145 /* Preferences-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 825C5BDFC610C9B082BE88AF5382F87B /* Preferences-dummy.m */; };
+		CD679E01B668D0C6594201643B4C28A5 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B07BD542201A04552A5D4A9D5B06C /* Keychain.swift */; };
 		D0220BFC2FA3C1FEF070B1BB76188B5A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
-		D4E86A4C7FEB9CD818A3FD50B31DE25D /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBA407E026473AA114B154F69E4A0A6 /* KeychainSwiftAccessOptions.swift */; };
+		D4E86A4C7FEB9CD818A3FD50B31DE25D /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986772358E321E4C6F8DFA12F237BA24 /* KeychainSwiftAccessOptions.swift */; };
+		D6E0F2B0A8C0815436E611A34136BADA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		D8E3587CEB1CBEA0D2F7A7F6DC5434D3 /* Preferences-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C36457E3D3742F3EBFE869BA5F0AB53 /* Preferences-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC4442C62C187173FB76C65F93B2C30 /* Pods-Sarin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4512178981A7C358E97DC7BF4F0994A /* Pods-Sarin-dummy.m */; };
 		EA3A7670AABC049FE253784863FB18DA /* Pods-SarinTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE1E00F37180210D1EB0BEAD4820456C /* Pods-SarinTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FA9730EBAC08AE7A0A399E052DBA03F4 /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F01D19AC6039FB6F05EFB9A82361F8C /* TegKeychainConstants.swift */; };
+		EA9D09495001CB2EAD30315FDAAE0DE7 /* PreferencesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ACD5568B8FE1F9E4B927362CE4B893 /* PreferencesTabViewController.swift */; };
+		F029CDB326681057001B0B183197FF5F /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D95A4F47E87DC0FCB323E08FB4A257 /* PreferencesWindowController.swift */; };
+		FA9730EBAC08AE7A0A399E052DBA03F4 /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5683707B2633742B0D2296765F4476 /* TegKeychainConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		629B80CE7E4422651C038A9B4B8D82A6 /* PBXContainerItemProxy */ = {
+		4977F725362EC57BB3C2873B643617FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 615C831BCE925ED486B225B87E44926D;
-			remoteInfo = KeychainAccess;
+			remoteGlobalIDString = 080990A33C8E049DC557762B0B4240DB;
+			remoteInfo = Preferences;
 		};
 		71BC7D3AC3F1646E9A5D76CC0CF6BDDC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -50,67 +57,93 @@
 			remoteGlobalIDString = 1921AB48C02053952BC877963621611F;
 			remoteInfo = "Pods-Sarin";
 		};
-		A95DCA27C213C9888EAA3B07FA2F3105 /* PBXContainerItemProxy */ = {
+		B04DA070185D63BB1F64D40BEF7988D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 07E54A78BCF82272E99319D7F7F5E8C1;
 			remoteInfo = KeychainSwift;
 		};
+		E13429DB8CE7A9399B63124496D5D7EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 615C831BCE925ED486B225B87E44926D;
+			remoteInfo = KeychainAccess;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0009B07FDE5E21723DF56C679BC15254 /* Pods-SarinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SarinUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		0C1BC787E30B0E4B875DC941722337C2 /* KeychainSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeychainSwift-Info.plist"; sourceTree = "<group>"; };
-		11B24834B1198360FECB29F7D08F46E5 /* Pods_SarinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SarinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1257B5D0AB075E1C062D94663BC7C434 /* KeychainAccess-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeychainAccess-Info.plist"; sourceTree = "<group>"; };
+		015D5556A7D8DB86B6262D558502FE9C /* Pods_Sarin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sarin.framework; path = "Pods-Sarin.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E7D3A1D9B4DB83A4F4A97D7A9F7620 /* Preferenceable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Preferenceable.swift; path = Sources/Preferences/Preferenceable.swift; sourceTree = "<group>"; };
+		036B44BDB9FEDBD618EB14B3E49963C7 /* KeychainAccess-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-prefix.pch"; sourceTree = "<group>"; };
+		04A93002777EE036996360319DFA5A5F /* KeychainSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwift.swift; path = Sources/KeychainSwift.swift; sourceTree = "<group>"; };
+		06EB022A8663BE3929EC9BFD850FF682 /* Pods_SarinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SarinTests.framework; path = "Pods-SarinTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BBC7124D7390592F7238D5173C3354F /* Pods_SarinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SarinUITests.framework; path = "Pods-SarinUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1318CB9DDC5476DC85027B34D9E93CD9 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainAccess.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		136F999B9C899EE49034D808284A0D38 /* Pods-Sarin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Sarin.modulemap"; sourceTree = "<group>"; };
-		14AF4F4758CB68744A24301577F9C460 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
-		174178330E100AE1D5F3BE18E7E342A6 /* KeychainAccess.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainAccess.xcconfig; sourceTree = "<group>"; };
+		147CBD4C0DB7D664A9ADDA413293E592 /* Preferences-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Preferences-Info.plist"; sourceTree = "<group>"; };
 		1F0365607B2619EA97A07EADE0A89431 /* Pods-SarinUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SarinUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		235DFDC53F8736C2E0BD061A0D58756A /* Pods-Sarin-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sarin-acknowledgements.plist"; sourceTree = "<group>"; };
 		29DF5CF38A499D5CD90ABFF0F0A89D8C /* Pods-SarinTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SarinTests-dummy.m"; sourceTree = "<group>"; };
+		2A62F7DABD18FC6EB03A22A7C2928A47 /* Preferences.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Preferences.xcconfig; sourceTree = "<group>"; };
 		3BAB2F6F604A762881AEAFA1E056B216 /* Pods-Sarin-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sarin-frameworks.sh"; sourceTree = "<group>"; };
 		4036EBACCADE9B63331BC8B783627CAD /* Pods-SarinTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SarinTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		427A72D58A09663972C60556C9D590C0 /* Pods-SarinUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SarinUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4418B1D341A04476DA856F1D92273FE2 /* Pods-SarinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SarinTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4D2953E17A9F30225AD895B26E33949E /* KeychainAccess-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-umbrella.h"; sourceTree = "<group>"; };
+		4651C65B5180FCA76548FA5BEC9CCC00 /* KeychainSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainSwift.modulemap; sourceTree = "<group>"; };
+		50D95A4F47E87DC0FCB323E08FB4A257 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreferencesWindowController.swift; path = Sources/Preferences/PreferencesWindowController.swift; sourceTree = "<group>"; };
 		5104ECAFBB643599A7FA2ED9CA15A5F5 /* Pods-Sarin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sarin-umbrella.h"; sourceTree = "<group>"; };
+		54EEED22213F4C1CAB2346508C72059F /* KeychainSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainSwift-dummy.m"; sourceTree = "<group>"; };
 		5A50ABA335A19161D8D9E337B9E46076 /* Pods-Sarin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sarin.debug.xcconfig"; sourceTree = "<group>"; };
-		5FCE22F014B781674E7758B6BC6B2337 /* KeychainAccess-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-prefix.pch"; sourceTree = "<group>"; };
+		5C36457E3D3742F3EBFE869BA5F0AB53 /* Preferences-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Preferences-umbrella.h"; sourceTree = "<group>"; };
+		65055E48B9918C5E024D9510975B18D9 /* KeychainSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-umbrella.h"; sourceTree = "<group>"; };
+		65EF94BDC04AFA5B8F3B147B1703FDD0 /* KeychainSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-prefix.pch"; sourceTree = "<group>"; };
 		708D61BF9C4F326F978621D1A2212917 /* Pods-SarinUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SarinUITests-dummy.m"; sourceTree = "<group>"; };
-		7D817EED99CF5F91813B9B035CCF02FE /* KeychainSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainSwift-dummy.m"; sourceTree = "<group>"; };
-		7DC3B3C77B62F7E78A7A3EB2083307A5 /* KeychainSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-umbrella.h"; sourceTree = "<group>"; };
-		7E0F30CAEE9A1957D57968B5EE00AFE7 /* KeychainSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainSwift.xcconfig; sourceTree = "<group>"; };
-		7F01D19AC6039FB6F05EFB9A82361F8C /* TegKeychainConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TegKeychainConstants.swift; path = Sources/TegKeychainConstants.swift; sourceTree = "<group>"; };
+		70ACD5568B8FE1F9E4B927362CE4B893 /* PreferencesTabViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreferencesTabViewController.swift; path = Sources/Preferences/PreferencesTabViewController.swift; sourceTree = "<group>"; };
+		728F0F6957441FB7D8D9282B473D0A56 /* KeychainSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeychainSwift-Info.plist"; sourceTree = "<group>"; };
+		78D96175E47679AC3D83A51A742C72AA /* KeychainAccess-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainAccess-dummy.m"; sourceTree = "<group>"; };
+		825C5BDFC610C9B082BE88AF5382F87B /* Preferences-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Preferences-dummy.m"; sourceTree = "<group>"; };
+		83A6020FEB3CA11D50C14FC3E01E0A49 /* Preferences.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Preferences.framework; path = Preferences.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5A5078B6208F5D65F998398F18A7CA /* Pods-Sarin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sarin.release.xcconfig"; sourceTree = "<group>"; };
-		9A047E567570A38EEEB624F1A4926511 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8D3A6702016C6A1FFEFE271701CCF15C /* KeychainAccess.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainAccess.xcconfig; sourceTree = "<group>"; };
+		8E9495288C8BB03D363646F21674441D /* util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = util.swift; path = Sources/Preferences/util.swift; sourceTree = "<group>"; };
+		957EB8EBDF17EC7066F5309430E5210A /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainSwift.framework; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		986772358E321E4C6F8DFA12F237BA24 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = Sources/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
+		9D55B80B3BAAE6264C6630B68EC2F94F /* KeychainAccess.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainAccess.modulemap; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A18B07BD542201A04552A5D4A9D5B06C /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
 		AB023608018A2BC1460A0E7EAEB76445 /* Pods-SarinUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SarinUITests.modulemap"; sourceTree = "<group>"; };
+		B2381A045C30D6B7A84FADCF575E4582 /* KeychainAccess-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeychainAccess-Info.plist"; sourceTree = "<group>"; };
+		B53DD247416D21C9600120C6243A1E77 /* KeychainAccess-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-umbrella.h"; sourceTree = "<group>"; };
 		BFED66C4CB36B67D81D082E9143BC164 /* Pods-SarinTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SarinTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C29CFFB58CD3F8EB602BDC96F02465C3 /* Pods-SarinUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SarinUITests-Info.plist"; sourceTree = "<group>"; };
+		C3E6714A21FEA91752E7852D4D98CEDF /* Preferences.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Preferences.modulemap; sourceTree = "<group>"; };
 		C4512178981A7C358E97DC7BF4F0994A /* Pods-Sarin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sarin-dummy.m"; sourceTree = "<group>"; };
-		C7CDEB64D4A75FA2F3FE745185B0E03F /* KeychainSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwift.swift; path = Sources/KeychainSwift.swift; sourceTree = "<group>"; };
+		CC3FAE77483326DF055C45DCBBC16101 /* KeychainSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainSwift.xcconfig; sourceTree = "<group>"; };
 		CD41713D83141A9C61289239AD418380 /* Pods-SarinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SarinTests.release.xcconfig"; sourceTree = "<group>"; };
 		D2BF1B28C1AD26197C5E84BB86FCE9D9 /* Pods-SarinUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SarinUITests-umbrella.h"; sourceTree = "<group>"; };
-		D6224309328A819BDB1FBECB11D7E5A0 /* KeychainSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainSwift.modulemap; sourceTree = "<group>"; };
-		DC3D304C2C23B36496FD4F753EE89291 /* KeychainSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-prefix.pch"; sourceTree = "<group>"; };
+		D509D6331FCAFBD46C4C683504362BBD /* Preferences-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Preferences-prefix.pch"; sourceTree = "<group>"; };
 		DDACC3DB748149E219063C2B64AB85F1 /* Pods-Sarin-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sarin-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E5AA3A460158E12B50C199FFDB53E462 /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAC3421F8BE3441699EE07D2BE28C6F /* Pods-SarinTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SarinTests.modulemap"; sourceTree = "<group>"; };
 		EE1E00F37180210D1EB0BEAD4820456C /* Pods-SarinTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SarinTests-umbrella.h"; sourceTree = "<group>"; };
-		EFBA407E026473AA114B154F69E4A0A6 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = Sources/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
-		F03A9650E992A2415742CF079602A0D2 /* KeychainAccess-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainAccess-dummy.m"; sourceTree = "<group>"; };
-		F4EF6AF641AFCB531706F2B9B0190D76 /* KeychainAccess.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainAccess.modulemap; sourceTree = "<group>"; };
 		F5C7A3E3E32976DB50BC871F74E32526 /* Pods-Sarin-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sarin-Info.plist"; sourceTree = "<group>"; };
 		F755DFDA9B6710EE9F7D698A520CAEA3 /* Pods-SarinUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SarinUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		FB3121DC58D61F5CE8A4EF824BE7AD01 /* Pods_SarinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SarinUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD99872AF4F9BA87268CDCA61BB1D801 /* Pods_Sarin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sarin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5683707B2633742B0D2296765F4476 /* TegKeychainConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TegKeychainConstants.swift; path = Sources/TegKeychainConstants.swift; sourceTree = "<group>"; };
 		FF3C9E3EDABC8B8C26E588F2F291189C /* Pods-SarinTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SarinTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		10FCA9D8400860EF4C00E01C8E140096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09BA19D848CE57090FA00F3BFB87238F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2377789966FBD2AD9499BE2964397C4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,11 +168,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B89B3CEF8266A0160DF07FD43ACC4BAF /* Frameworks */ = {
+		8A3C5276ECE9757A5411B34E27F239B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BE33011FF9D4828D64750C47329B381 /* Cocoa.framework in Frameworks */,
+				D6E0F2B0A8C0815436E611A34136BADA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,53 +203,94 @@
 			path = "Target Support Files/Pods-SarinTests";
 			sourceTree = "<group>";
 		};
-		2B5185B407D54546996612D4C010D5F8 /* Support Files */ = {
+		13B33951D0B93A66235232C549670964 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F4EF6AF641AFCB531706F2B9B0190D76 /* KeychainAccess.modulemap */,
-				174178330E100AE1D5F3BE18E7E342A6 /* KeychainAccess.xcconfig */,
-				F03A9650E992A2415742CF079602A0D2 /* KeychainAccess-dummy.m */,
-				1257B5D0AB075E1C062D94663BC7C434 /* KeychainAccess-Info.plist */,
-				5FCE22F014B781674E7758B6BC6B2337 /* KeychainAccess-prefix.pch */,
-				4D2953E17A9F30225AD895B26E33949E /* KeychainAccess-umbrella.h */,
+				9D55B80B3BAAE6264C6630B68EC2F94F /* KeychainAccess.modulemap */,
+				8D3A6702016C6A1FFEFE271701CCF15C /* KeychainAccess.xcconfig */,
+				78D96175E47679AC3D83A51A742C72AA /* KeychainAccess-dummy.m */,
+				B2381A045C30D6B7A84FADCF575E4582 /* KeychainAccess-Info.plist */,
+				036B44BDB9FEDBD618EB14B3E49963C7 /* KeychainAccess-prefix.pch */,
+				B53DD247416D21C9600120C6243A1E77 /* KeychainAccess-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KeychainAccess";
 			sourceTree = "<group>";
 		};
-		35BAE5576F6F65D1F5DF285CF6FEC721 /* Support Files */ = {
+		3AD3BB32202356D9E15C7F58662617D7 /* KeychainAccess */ = {
 			isa = PBXGroup;
 			children = (
-				D6224309328A819BDB1FBECB11D7E5A0 /* KeychainSwift.modulemap */,
-				7E0F30CAEE9A1957D57968B5EE00AFE7 /* KeychainSwift.xcconfig */,
-				7D817EED99CF5F91813B9B035CCF02FE /* KeychainSwift-dummy.m */,
-				0C1BC787E30B0E4B875DC941722337C2 /* KeychainSwift-Info.plist */,
-				DC3D304C2C23B36496FD4F753EE89291 /* KeychainSwift-prefix.pch */,
-				7DC3B3C77B62F7E78A7A3EB2083307A5 /* KeychainSwift-umbrella.h */,
+				A18B07BD542201A04552A5D4A9D5B06C /* Keychain.swift */,
+				13B33951D0B93A66235232C549670964 /* Support Files */,
+			);
+			name = KeychainAccess;
+			path = KeychainAccess;
+			sourceTree = "<group>";
+		};
+		445811EF237769AC25BFF95CF4874AF3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4651C65B5180FCA76548FA5BEC9CCC00 /* KeychainSwift.modulemap */,
+				CC3FAE77483326DF055C45DCBBC16101 /* KeychainSwift.xcconfig */,
+				54EEED22213F4C1CAB2346508C72059F /* KeychainSwift-dummy.m */,
+				728F0F6957441FB7D8D9282B473D0A56 /* KeychainSwift-Info.plist */,
+				65EF94BDC04AFA5B8F3B147B1703FDD0 /* KeychainSwift-prefix.pch */,
+				65055E48B9918C5E024D9510975B18D9 /* KeychainSwift-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KeychainSwift";
 			sourceTree = "<group>";
 		};
-		9E6B2816DB11415A8957420F1CFB1806 /* Products */ = {
+		4C081A409DA33B7700B70BA3E8EFE61F /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				9A047E567570A38EEEB624F1A4926511 /* KeychainAccess.framework */,
-				E5AA3A460158E12B50C199FFDB53E462 /* KeychainSwift.framework */,
-				FD99872AF4F9BA87268CDCA61BB1D801 /* Pods_Sarin.framework */,
-				11B24834B1198360FECB29F7D08F46E5 /* Pods_SarinTests.framework */,
-				FB3121DC58D61F5CE8A4EF824BE7AD01 /* Pods_SarinUITests.framework */,
+				01E7D3A1D9B4DB83A4F4A97D7A9F7620 /* Preferenceable.swift */,
+				70ACD5568B8FE1F9E4B927362CE4B893 /* PreferencesTabViewController.swift */,
+				50D95A4F47E87DC0FCB323E08FB4A257 /* PreferencesWindowController.swift */,
+				8E9495288C8BB03D363646F21674441D /* util.swift */,
+				ACE9EC87C4C8C9C8A3080AF8793111A2 /* Support Files */,
+			);
+			name = Preferences;
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		6D9D6A185F0BA518A5F3EEABF58EE55D /* KeychainSwift */ = {
+			isa = PBXGroup;
+			children = (
+				04A93002777EE036996360319DFA5A5F /* KeychainSwift.swift */,
+				986772358E321E4C6F8DFA12F237BA24 /* KeychainSwiftAccessOptions.swift */,
+				FD5683707B2633742B0D2296765F4476 /* TegKeychainConstants.swift */,
+				445811EF237769AC25BFF95CF4874AF3 /* Support Files */,
+			);
+			name = KeychainSwift;
+			path = KeychainSwift;
+			sourceTree = "<group>";
+		};
+		7D428F9D1E5D9570F4A7BFD2429576F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1318CB9DDC5476DC85027B34D9E93CD9 /* KeychainAccess.framework */,
+				957EB8EBDF17EC7066F5309430E5210A /* KeychainSwift.framework */,
+				015D5556A7D8DB86B6262D558502FE9C /* Pods_Sarin.framework */,
+				06EB022A8663BE3929EC9BFD850FF682 /* Pods_SarinTests.framework */,
+				0BBC7124D7390592F7238D5173C3354F /* Pods_SarinUITests.framework */,
+				83A6020FEB3CA11D50C14FC3E01E0A49 /* Preferences.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B84B04A5B9594B8F2958460FE75457B5 /* KeychainAccess */ = {
+		ACE9EC87C4C8C9C8A3080AF8793111A2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				14AF4F4758CB68744A24301577F9C460 /* Keychain.swift */,
-				2B5185B407D54546996612D4C010D5F8 /* Support Files */,
+				C3E6714A21FEA91752E7852D4D98CEDF /* Preferences.modulemap */,
+				2A62F7DABD18FC6EB03A22A7C2928A47 /* Preferences.xcconfig */,
+				825C5BDFC610C9B082BE88AF5382F87B /* Preferences-dummy.m */,
+				147CBD4C0DB7D664A9ADDA413293E592 /* Preferences-Info.plist */,
+				D509D6331FCAFBD46C4C683504362BBD /* Preferences-prefix.pch */,
+				5C36457E3D3742F3EBFE869BA5F0AB53 /* Preferences-umbrella.h */,
 			);
-			path = KeychainAccess;
+			name = "Support Files";
+			path = "../Target Support Files/Preferences";
 			sourceTree = "<group>";
 		};
 		BBFCCD0515A983ADB34AE7EBEDC6DC32 /* Pods-SarinUITests */ = {
@@ -252,6 +326,16 @@
 			path = "Target Support Files/Pods-Sarin";
 			sourceTree = "<group>";
 		};
+		C5AE1B46C652A7D7606018623BBC2497 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AD3BB32202356D9E15C7F58662617D7 /* KeychainAccess */,
+				6D9D6A185F0BA518A5F3EEABF58EE55D /* KeychainSwift */,
+				4C081A409DA33B7700B70BA3E8EFE61F /* Preferences */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CBD43E0947D94E318A0ED1350CFF29ED /* OS X */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,19 +349,10 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
-				D300846A975E0832925100C932655EFA /* Pods */,
-				9E6B2816DB11415A8957420F1CFB1806 /* Products */,
+				C5AE1B46C652A7D7606018623BBC2497 /* Pods */,
+				7D428F9D1E5D9570F4A7BFD2429576F8 /* Products */,
 				E4F7F545C970CA960207B8AFD832342E /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D300846A975E0832925100C932655EFA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B84B04A5B9594B8F2958460FE75457B5 /* KeychainAccess */,
-				E15E7006DC9B070228CAB4EE20D05B19 /* KeychainSwift */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */ = {
@@ -286,17 +361,6 @@
 				CBD43E0947D94E318A0ED1350CFF29ED /* OS X */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E15E7006DC9B070228CAB4EE20D05B19 /* KeychainSwift */ = {
-			isa = PBXGroup;
-			children = (
-				C7CDEB64D4A75FA2F3FE745185B0E03F /* KeychainSwift.swift */,
-				EFBA407E026473AA114B154F69E4A0A6 /* KeychainSwiftAccessOptions.swift */,
-				7F01D19AC6039FB6F05EFB9A82361F8C /* TegKeychainConstants.swift */,
-				35BAE5576F6F65D1F5DF285CF6FEC721 /* Support Files */,
-			);
-			path = KeychainSwift;
 			sourceTree = "<group>";
 		};
 		E4F7F545C970CA960207B8AFD832342E /* Targets Support Files */ = {
@@ -344,11 +408,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4E637A1FAD1A860BFBC7ACD9E743C2F /* Headers */ = {
+		CFD72A3E5B948E5BB0A4248ECA08A8C8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E58DDD8D3D8297569A811D04C41832D /* Pods-Sarin-umbrella.h in Headers */,
+				D8E3587CEB1CBEA0D2F7A7F6DC5434D3 /* Preferences-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA4E1A74C661E45A27958240B3CBDBFF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B47921A33874EB798FC49585F870D934 /* Pods-Sarin-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,27 +442,46 @@
 			);
 			name = KeychainSwift;
 			productName = KeychainSwift;
-			productReference = E5AA3A460158E12B50C199FFDB53E462 /* KeychainSwift.framework */;
+			productReference = 957EB8EBDF17EC7066F5309430E5210A /* KeychainSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1921AB48C02053952BC877963621611F /* Pods-Sarin */ = {
+		080990A33C8E049DC557762B0B4240DB /* Preferences */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7ABF710F584ED1A2F7F67FE5A34C20E6 /* Build configuration list for PBXNativeTarget "Pods-Sarin" */;
+			buildConfigurationList = EB6114A8165811B0522DD86336084C65 /* Build configuration list for PBXNativeTarget "Preferences" */;
 			buildPhases = (
-				B4E637A1FAD1A860BFBC7ACD9E743C2F /* Headers */,
-				7BD3A1AAFBD7684AE7D138D140995878 /* Sources */,
-				B89B3CEF8266A0160DF07FD43ACC4BAF /* Frameworks */,
-				1921721EA2CA039666512569AD9B94BF /* Resources */,
+				CFD72A3E5B948E5BB0A4248ECA08A8C8 /* Headers */,
+				44821A47840E2A096F4A4131D90A180E /* Sources */,
+				8A3C5276ECE9757A5411B34E27F239B3 /* Frameworks */,
+				A96F589BFB2688D05571C09D29AFFC51 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				98E28DFBB6CC86DA095312F5C5F136A6 /* PBXTargetDependency */,
-				57A11C11D4C93F424DFC2D9ADBC71F0D /* PBXTargetDependency */,
+			);
+			name = Preferences;
+			productName = Preferences;
+			productReference = 83A6020FEB3CA11D50C14FC3E01E0A49 /* Preferences.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1921AB48C02053952BC877963621611F /* Pods-Sarin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7068D371C441AB172B23C666C9D19E6 /* Build configuration list for PBXNativeTarget "Pods-Sarin" */;
+			buildPhases = (
+				EA4E1A74C661E45A27958240B3CBDBFF /* Headers */,
+				6BEF2CE36B28EDACD20955844AC86DBD /* Sources */,
+				10FCA9D8400860EF4C00E01C8E140096 /* Frameworks */,
+				673832D8BA5C11A0550A4A063777EE59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1437B24962805D9852EC9C4FE8D06BC0 /* PBXTargetDependency */,
+				A8CAA4BD578AE32ED79695D62E18B9E1 /* PBXTargetDependency */,
+				0BA3BB6E278CB709F8807129E5F13C50 /* PBXTargetDependency */,
 			);
 			name = "Pods-Sarin";
 			productName = "Pods-Sarin";
-			productReference = FD99872AF4F9BA87268CDCA61BB1D801 /* Pods_Sarin.framework */;
+			productReference = 015D5556A7D8DB86B6262D558502FE9C /* Pods_Sarin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5BD8FB24F66DD556B6B39E1AD5C50283 /* Pods-SarinTests */ = {
@@ -409,7 +500,7 @@
 			);
 			name = "Pods-SarinTests";
 			productName = "Pods-SarinTests";
-			productReference = 11B24834B1198360FECB29F7D08F46E5 /* Pods_SarinTests.framework */;
+			productReference = 06EB022A8663BE3929EC9BFD850FF682 /* Pods_SarinTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		615C831BCE925ED486B225B87E44926D /* KeychainAccess */ = {
@@ -427,7 +518,7 @@
 			);
 			name = KeychainAccess;
 			productName = KeychainAccess;
-			productReference = 9A047E567570A38EEEB624F1A4926511 /* KeychainAccess.framework */;
+			productReference = 1318CB9DDC5476DC85027B34D9E93CD9 /* KeychainAccess.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6A187AF62C03EBF9EB72212012916635 /* Pods-SarinUITests */ = {
@@ -446,7 +537,7 @@
 			);
 			name = "Pods-SarinUITests";
 			productName = "Pods-SarinUITests";
-			productReference = FB3121DC58D61F5CE8A4EF824BE7AD01 /* Pods_SarinUITests.framework */;
+			productReference = 0BBC7124D7390592F7238D5173C3354F /* Pods_SarinUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -459,14 +550,14 @@
 				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 9E6B2816DB11415A8957420F1CFB1806 /* Products */;
+			productRefGroup = 7D428F9D1E5D9570F4A7BFD2429576F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -475,19 +566,13 @@
 				1921AB48C02053952BC877963621611F /* Pods-Sarin */,
 				5BD8FB24F66DD556B6B39E1AD5C50283 /* Pods-SarinTests */,
 				6A187AF62C03EBF9EB72212012916635 /* Pods-SarinUITests */,
+				080990A33C8E049DC557762B0B4240DB /* Preferences */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		153594991ADE9BDDE5FB6C2FDB474216 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1921721EA2CA039666512569AD9B94BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -508,7 +593,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		673832D8BA5C11A0550A4A063777EE59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E99A5D1D3AD733EE9662694B6E392F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A96F589BFB2688D05571C09D29AFFC51 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,19 +625,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44821A47840E2A096F4A4131D90A180E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6683CF7B61BB8DE1BC8BCC68AFFBFCBF /* Preferenceable.swift in Sources */,
+				C8B65C96BD7DB8B744C27B105B7D4145 /* Preferences-dummy.m in Sources */,
+				EA9D09495001CB2EAD30315FDAAE0DE7 /* PreferencesTabViewController.swift in Sources */,
+				F029CDB326681057001B0B183197FF5F /* PreferencesWindowController.swift in Sources */,
+				6B69C47EC67F7F9C69D17D6593338973 /* util.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BEF2CE36B28EDACD20955844AC86DBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC4442C62C187173FB76C65F93B2C30 /* Pods-Sarin-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EAAB8BB44EAAEA35418CA6089050A15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8DF57262CE05B96379EDF906E2359AC0 /* Pods-SarinUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BD3A1AAFBD7684AE7D138D140995878 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4FB8F7D3BBCBA231146C068266DC212A /* Pods-Sarin-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,17 +676,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0BA3BB6E278CB709F8807129E5F13C50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Preferences;
+			target = 080990A33C8E049DC557762B0B4240DB /* Preferences */;
+			targetProxy = 4977F725362EC57BB3C2873B643617FC /* PBXContainerItemProxy */;
+		};
+		1437B24962805D9852EC9C4FE8D06BC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeychainAccess;
+			target = 615C831BCE925ED486B225B87E44926D /* KeychainAccess */;
+			targetProxy = E13429DB8CE7A9399B63124496D5D7EE /* PBXContainerItemProxy */;
+		};
 		399B7F2DE3C11F604484C805CB9BD03F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Sarin";
 			target = 1921AB48C02053952BC877963621611F /* Pods-Sarin */;
 			targetProxy = 71BC7D3AC3F1646E9A5D76CC0CF6BDDC /* PBXContainerItemProxy */;
-		};
-		57A11C11D4C93F424DFC2D9ADBC71F0D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KeychainSwift;
-			target = 07E54A78BCF82272E99319D7F7F5E8C1 /* KeychainSwift */;
-			targetProxy = A95DCA27C213C9888EAA3B07FA2F3105 /* PBXContainerItemProxy */;
 		};
 		81D0A6568AA0FEDB3B0E278C4BDCFF1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -583,29 +700,65 @@
 			target = 1921AB48C02053952BC877963621611F /* Pods-Sarin */;
 			targetProxy = 9DCF92FF3F808A2BC0B4FD98018B257C /* PBXContainerItemProxy */;
 		};
-		98E28DFBB6CC86DA095312F5C5F136A6 /* PBXTargetDependency */ = {
+		A8CAA4BD578AE32ED79695D62E18B9E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = KeychainAccess;
-			target = 615C831BCE925ED486B225B87E44926D /* KeychainAccess */;
-			targetProxy = 629B80CE7E4422651C038A9B4B8D82A6 /* PBXContainerItemProxy */;
+			name = KeychainSwift;
+			target = 07E54A78BCF82272E99319D7F7F5E8C1 /* KeychainSwift */;
+			targetProxy = B04DA070185D63BB1F64D40BEF7988D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		172BDB63180915F8153B8FED41DD806E /* Release */ = {
+		0B9DD7E903454C679FB8EE459896F1B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 174178330E100AE1D5F3BE18E7E342A6 /* KeychainAccess.xcconfig */;
+			baseConfigurationReference = 2A62F7DABD18FC6EB03A22A7C2928A47 /* Preferences.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = LWUG28EFDW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Preferences/Preferences-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Preferences/Preferences-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Preferences/Preferences.modulemap";
+				PRODUCT_MODULE_NAME = Preferences;
+				PRODUCT_NAME = Preferences;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		172BDB63180915F8153B8FED41DD806E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D3A6702016C6A1FFEFE271701CCF15C /* KeychainAccess.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -622,7 +775,6 @@
 				MODULEMAP_FILE = "Target Support Files/KeychainAccess/KeychainAccess.modulemap";
 				PRODUCT_MODULE_NAME = KeychainAccess;
 				PRODUCT_NAME = KeychainAccess;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -632,7 +784,127 @@
 			};
 			name = Release;
 		};
-		430C0A1F2A9CB52955BEC7CE69B7B629 /* Debug */ = {
+		2F54C674BE12D6C251A73456A500A5CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD41713D83141A9C61289239AD418380 /* Pods-SarinTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SarinTests/Pods-SarinTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-SarinTests/Pods-SarinTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		65D70E2CF7101805BEF461CDBF52F829 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 427A72D58A09663972C60556C9D590C0 /* Pods-SarinUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SarinUITests/Pods-SarinUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-SarinUITests/Pods-SarinUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		69F1B74845192A657D31AC3035C3A721 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4418B1D341A04476DA856F1D92273FE2 /* Pods-SarinTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SarinTests/Pods-SarinTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-SarinTests/Pods-SarinTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9382317ED75CFC741F429FC224405042 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -683,7 +955,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -696,7 +968,238 @@
 			};
 			name = Debug;
 		};
-		597E092427DF423992C59C814880FE96 /* Release */ = {
+		A22B88DB652E383EC785554EE0CEAAA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC3FAE77483326DF055C45DCBBC16101 /* KeychainSwift.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeychainSwift/KeychainSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
+				PRODUCT_MODULE_NAME = KeychainSwift;
+				PRODUCT_NAME = KeychainSwift;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AFCECF526008F87016947B4E604BAD68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0009B07FDE5E21723DF56C679BC15254 /* Pods-SarinUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SarinUITests/Pods-SarinUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-SarinUITests/Pods-SarinUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C3AF015AAEBF16026E95C9A48DA07EB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC3FAE77483326DF055C45DCBBC16101 /* KeychainSwift.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeychainSwift/KeychainSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
+				PRODUCT_MODULE_NAME = KeychainSwift;
+				PRODUCT_NAME = KeychainSwift;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C84CCBED4C7F07727D3AF1D4F0CE4ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A62F7DABD18FC6EB03A22A7C2928A47 /* Preferences.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Preferences/Preferences-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Preferences/Preferences-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Preferences/Preferences.modulemap";
+				PRODUCT_MODULE_NAME = Preferences;
+				PRODUCT_NAME = Preferences;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D0020462E3D0D635CADE5911DBF9F484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A50ABA335A19161D8D9E337B9E46076 /* Pods-Sarin.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Sarin/Pods-Sarin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sarin/Pods-Sarin.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DC90C56A517F911AC9928CEA3C28F630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D3A6702016C6A1FFEFE271701CCF15C /* KeychainAccess.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainAccess/KeychainAccess-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeychainAccess/KeychainAccess-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/KeychainAccess/KeychainAccess.modulemap";
+				PRODUCT_MODULE_NAME = KeychainAccess;
+				PRODUCT_NAME = KeychainAccess;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E4DEAC9B52796426D2A37E7074A1738D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -744,7 +1247,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -756,7 +1259,7 @@
 			};
 			name = Release;
 		};
-		7EFA0183441C949BF7AD38CA6940B04C /* Release */ = {
+		F901137B0EF3EB0D4247360C2610E6EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B5A5078B6208F5D65F998398F18A7CA /* Pods-Sarin.release.xcconfig */;
 			buildSettings = {
@@ -782,7 +1285,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = "Target Support Files/Pods-Sarin/Pods-Sarin.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -795,322 +1298,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		9FB2D104A6C94D06C2B3DB2AF3168477 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4418B1D341A04476DA856F1D92273FE2 /* Pods-SarinTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-SarinTests/Pods-SarinTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MODULEMAP_FILE = "Target Support Files/Pods-SarinTests/Pods-SarinTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A22B88DB652E383EC785554EE0CEAAA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E0F30CAEE9A1957D57968B5EE00AFE7 /* KeychainSwift.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KeychainSwift/KeychainSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
-				PRODUCT_MODULE_NAME = KeychainSwift;
-				PRODUCT_NAME = KeychainSwift;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C1E0CF03B860AE4A795BF2CD557485C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 427A72D58A09663972C60556C9D590C0 /* Pods-SarinUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-SarinUITests/Pods-SarinUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MODULEMAP_FILE = "Target Support Files/Pods-SarinUITests/Pods-SarinUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C3AF015AAEBF16026E95C9A48DA07EB6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E0F30CAEE9A1957D57968B5EE00AFE7 /* KeychainSwift.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KeychainSwift/KeychainSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
-				PRODUCT_MODULE_NAME = KeychainSwift;
-				PRODUCT_NAME = KeychainSwift;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DC90C56A517F911AC9928CEA3C28F630 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 174178330E100AE1D5F3BE18E7E342A6 /* KeychainAccess.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = LWUG28EFDW;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/KeychainAccess/KeychainAccess-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KeychainAccess/KeychainAccess-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/KeychainAccess/KeychainAccess.modulemap";
-				PRODUCT_MODULE_NAME = KeychainAccess;
-				PRODUCT_NAME = KeychainAccess;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EA48B21B55BEB5F5B69899B5B7EF14C1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A50ABA335A19161D8D9E337B9E46076 /* Pods-Sarin.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Sarin/Pods-Sarin-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MODULEMAP_FILE = "Target Support Files/Pods-Sarin/Pods-Sarin.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F4A4B024594B3A245028DFA73C8EDC27 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD41713D83141A9C61289239AD418380 /* Pods-SarinTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-SarinTests/Pods-SarinTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MODULEMAP_FILE = "Target Support Files/Pods-SarinTests/Pods-SarinTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FDE1DD02B80F572B3A237F14CF0D7A98 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0009B07FDE5E21723DF56C679BC15254 /* Pods-SarinUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-SarinUITests/Pods-SarinUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MODULEMAP_FILE = "Target Support Files/Pods-SarinUITests/Pods-SarinUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1118,8 +1305,8 @@
 		13AAFB3FEB538F2003ED5A193B3580D9 /* Build configuration list for PBXNativeTarget "Pods-SarinUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FDE1DD02B80F572B3A237F14CF0D7A98 /* Debug */,
-				C1E0CF03B860AE4A795BF2CD557485C6 /* Release */,
+				AFCECF526008F87016947B4E604BAD68 /* Debug */,
+				65D70E2CF7101805BEF461CDBF52F829 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1127,8 +1314,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				430C0A1F2A9CB52955BEC7CE69B7B629 /* Debug */,
-				597E092427DF423992C59C814880FE96 /* Release */,
+				9382317ED75CFC741F429FC224405042 /* Debug */,
+				E4DEAC9B52796426D2A37E7074A1738D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1136,17 +1323,8 @@
 		587A5CD8AEA31E994F869FF92C7B920C /* Build configuration list for PBXNativeTarget "Pods-SarinTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9FB2D104A6C94D06C2B3DB2AF3168477 /* Debug */,
-				F4A4B024594B3A245028DFA73C8EDC27 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7ABF710F584ED1A2F7F67FE5A34C20E6 /* Build configuration list for PBXNativeTarget "Pods-Sarin" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EA48B21B55BEB5F5B69899B5B7EF14C1 /* Debug */,
-				7EFA0183441C949BF7AD38CA6940B04C /* Release */,
+				69F1B74845192A657D31AC3035C3A721 /* Debug */,
+				2F54C674BE12D6C251A73456A500A5CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1165,6 +1343,24 @@
 			buildConfigurations = (
 				C3AF015AAEBF16026E95C9A48DA07EB6 /* Debug */,
 				A22B88DB652E383EC785554EE0CEAAA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7068D371C441AB172B23C666C9D19E6 /* Build configuration list for PBXNativeTarget "Pods-Sarin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0020462E3D0D635CADE5911DBF9F484 /* Debug */,
+				F901137B0EF3EB0D4247360C2610E6EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB6114A8165811B0522DD86336084C65 /* Build configuration list for PBXNativeTarget "Preferences" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C84CCBED4C7F07727D3AF1D4F0CE4ADB /* Debug */,
+				0B9DD7E903454C679FB8EE459896F1B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

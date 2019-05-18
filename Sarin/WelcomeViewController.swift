@@ -20,7 +20,7 @@ class WelcomeViewController: NSViewController {
     @IBOutlet weak var titleLabel: NSTextField!
     @IBOutlet weak var bodyLabel: NSTextField!
     @IBOutlet weak var blueButton: NSButton!
-    @IBOutlet weak var disclaimerLabel: NSTextField!
+    
     
     var buttoncount:Int = 0
     
@@ -39,7 +39,6 @@ class WelcomeViewController: NSViewController {
             secondaryHeaderLabel.isHidden = true
             bodyLabel.isHidden = true
             blueButton.title = "Go"
-            disclaimerLabel.isHidden = true
             buttoncount = 1
         }
         else if buttoncount == 1{

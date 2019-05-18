@@ -8,6 +8,7 @@
 
 import Foundation
 let defaults = UserDefaults.standard
+
 func gitClone(gitLink:String,installDestination:String){
     let task = Process.init()
     task.launchPath = "/usr/bin/git"

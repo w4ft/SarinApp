@@ -9,9 +9,11 @@
 import Foundation
 import KeychainAccess
 
+let keychain = Keychain(service: "Sarin")
+
+let location:String = defaults.string(forKey: "installLocation") ?? ""
+
 func killall(){
-    let keychain = Keychain(service: "Sarin")
-    let location:String = defaults.string(forKey: "installLocation") ?? ""
     let hasBeenSetup:Bool = defaults.bool(forKey: "isInstalled")
     if hasBeenSetup{
         let task = Process.init()
@@ -31,3 +33,20 @@ func killall(){
         }
     }
 }
+
+func setPackets(state:String){
+    let task = Process.init()
+    let pipe = Pipe.init()
+    task.launchPath = "/bin/bash"
+    task.arguments = ["--login",location+"/Sarin/sarin_scripts/enablePackets.sh",state, keychain[NSUserName()]] as? [String]
+    task.standardOutput = pipe
+    task.launch()
+    let group = DispatchGroup()
+    group.enter()
+    DispatchQueue.global().async {
+        task.waitUntilExit()
+        group.leave()
+    }
+}
+
+

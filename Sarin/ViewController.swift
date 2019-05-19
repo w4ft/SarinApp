@@ -41,15 +41,16 @@ class ViewController: NSViewController {
     //MARK: Variables
     var hasBeenSetup:Bool = defaults.bool(forKey: "isInstalled")
     var data:[String] = []
-    let location:String = defaults.string(forKey: "installLocation") ?? ""
+//    let location:String = defaults.string(forKey: "installLocation") ?? ""
     
-    let keychain = Keychain(service: "Sarin")
+//    let keychain = Keychain(service: "Sarin")
     
     var scanDict = ["ip1": "mac1","ip2": "mac2","ip3": "mac3"]
     var ipList:[String] = []
     var macList:[String] = []
     var infoList:[String] = []
     var unparsedScan:String = ""
+    @IBOutlet weak var wifiKillerModeSwitch: NSButton!
     
     var rowIndexes:[Int] = []
     
@@ -179,6 +180,7 @@ class ViewController: NSViewController {
         stopAttacksButton.isEnabled = true
         attackButton.isEnabled = false
         setRouterButton.isEnabled = false
+        wifiKillerModeSwitch.isEnabled = false
     }
     
     @IBAction func stopAttackButtonPressed(_ sender: Any) {
@@ -187,7 +189,20 @@ class ViewController: NSViewController {
         killall()
         attackButton.isEnabled = true
         stopAttacksButton.isEnabled = false
+        wifiKillerModeSwitch.isEnabled = true
     }
+    
+    @IBAction func wifiKillModeSwitchPressed(_ sender: NSButton) {
+        switch sender.state{
+        case .on:
+            setPackets(state: "0")
+        case .off:
+            setPackets(state: "1")
+        default:
+            setPackets(state: "1")
+        }
+    }
+    
     
 
 }

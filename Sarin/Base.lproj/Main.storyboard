@@ -981,6 +981,17 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Oo-j9-NBn">
+                                <rect key="frame" x="39" y="285" width="105" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Wifi Kill Mode" bezelStyle="regularSquare" imagePosition="left" inset="2" id="doh-lM-0Ik">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="wifiKillModeSwitchPressed:" target="XfG-lQ-9wD" id="Esq-pS-tG0"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -989,6 +1000,7 @@
                         <outlet property="setRouterButton" destination="ui8-Ao-Xv9" id="PZZ-qE-1Ge"/>
                         <outlet property="stopAttacksButton" destination="2LM-QB-Qbn" id="Hdu-vK-Peg"/>
                         <outlet property="tableView" destination="szN-zS-zzd" id="Wdj-2E-ddu"/>
+                        <outlet property="wifiKillerModeSwitch" destination="3Oo-j9-NBn" id="usL-HP-NE2"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1141,9 +1153,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jej-Nm-c3Z">
-                                <rect key="frame" x="91" y="229" width="339" height="17"/>
+                                <rect key="frame" x="91" y="229" width="401" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Installing libnet, libnids, libpcap, and openssl via brew..." id="Wyb-Qo-av5">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Installing libnet, libnids, libpcap, openssl, and arp-scan via brew..." id="Wyb-Qo-av5">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

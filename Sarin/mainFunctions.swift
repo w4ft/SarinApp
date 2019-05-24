@@ -49,4 +49,38 @@ func setPackets(state:String){
     }
 }
 
+func getRouterIP () -> String{
+    let go = Process()
+    let pipe = Pipe()
+    go.launchPath = "/usr/sbin/netstat"
+    go.arguments = ["-nr", "|", "grep","default"]
+    
+    var ip = " "
+    go.standardOutput = pipe
+    go.launch()
+    print("hi")
+    let data = pipe.fileHandleForReading.readDataToEndOfFile()
+    let output = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+    let string : String = output! as String
+    let characters = Array(string)
+    var counter = 0
+    for (index,character) in characters.enumerated(){
+        let num = Int(String(character))
+        if num != nil {
+            counter = index
+            break
+        }
+    }
+    while true{
+        if characters[counter] == " "{
+            break
+        }
+        
+        ip.append(characters[counter])
+        counter = counter+1
+        
+    }
+    ip.remove(at: String.Index(encodedOffset: 0))
+    return ip
+}
 

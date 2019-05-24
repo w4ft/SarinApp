@@ -9,16 +9,17 @@
 import Cocoa
 import KeychainAccess
 
-class ViewController: NSViewController {
 
+class ViewController: NSViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         attackButton.isEnabled = false
         stopAttacksButton.isEnabled = false
-        setRouterButton.isEnabled = false
+        
         tableView.delegate = self
         tableView.dataSource = self
-//        hasBeenSetup = false
+        //        hasBeenSetup = false
         //Show Setup Page on Start if hasBeenSetup == false
         if !hasBeenSetup{
             _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(presentSheet), userInfo: nil, repeats: false)
@@ -27,7 +28,7 @@ class ViewController: NSViewController {
     
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
     
@@ -35,15 +36,17 @@ class ViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var progressSpinner: NSProgressIndicator!
     @IBOutlet weak var attackButton: NSButton!
-    @IBOutlet weak var setRouterButton: NSButton!
     @IBOutlet weak var stopAttacksButton: NSButton!
+    @IBOutlet var tcpdumpView: NSTextView!
     
     //MARK: Variables
     var hasBeenSetup:Bool = defaults.bool(forKey: "isInstalled")
     var data:[String] = []
-//    let location:String = defaults.string(forKey: "installLocation") ?? ""
+    var tcpdump:String = ""
     
-//    let keychain = Keychain(service: "Sarin")
+    //    let location:String = defaults.string(forKey: "installLocation") ?? ""
+    
+    //    let keychain = Keychain(service: "Sarin")
     
     var scanDict = ["ip1": "mac1","ip2": "mac2","ip3": "mac3"]
     var ipList:[String] = []
@@ -64,20 +67,20 @@ class ViewController: NSViewController {
         
         var createdString: String = ""
         var listOfDeviceInfo: [String] = []
-
-//        print(characters)
+        
+        //        print(characters)
         for (_,character) in characters.enumerated(){
             if (character != "\t" && character != "\n"){
                 createdString.append(character)
             }
             if (character == "\t" || character == "\n"){
-//                print(createdString)
+                //                print(createdString)
                 listOfDeviceInfo.append(createdString)
                 createdString = ""
             }
         }
-//        print(listOfDeviceInfo)
-//        print("listOfDevice Count: " + listOfDeviceInfo.count)
+        //        print(listOfDeviceInfo)
+        //        print("listOfDevice Count: " + listOfDeviceInfo.count)
         
         for (index, string) in listOfDeviceInfo.enumerated(){
             if (index%3 == 0){
@@ -97,7 +100,7 @@ class ViewController: NSViewController {
         let task = Process.init()
         let pipe = Pipe.init()
         task.launchPath = "/bin/bash"
-        task.arguments = ["--login",location+"/Sarin/sarin_scripts/arp-scan.sh"]
+        task.arguments = ["--login",location+"/Sarin/sarin_scripts/arp-scan.sh",keychain[NSUserName()]] as? [String]
         task.standardOutput = pipe
         task.launch()
         let group = DispatchGroup()
@@ -109,7 +112,8 @@ class ViewController: NSViewController {
         group.notify(queue: .main) {
             let data = pipe.fileHandleForReading.readDataToEndOfFile()
             let output = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-//            print(output)
+            //            print(output)
+            self.routerIP = getRouterIP()
             self.unparsedScan = output! as String
             self.parseOutput(input: self.unparsedScan)
             self.progressSpinner.stopAnimation(self)
@@ -145,7 +149,7 @@ class ViewController: NSViewController {
         }
         return ipsFromRowIndexes
     }
-
+    
     func attackUsers(){
         for (_,user) in currentDevices.enumerated(){
             let task = Process.init()
@@ -167,19 +171,22 @@ class ViewController: NSViewController {
         
     }
     @IBAction func setRouterIP(_ sender: Any) {
-        routerIP = ipList[tableView.selectedRowIndexes.map { Int($0) }[0]]
-        setRouterButton.isEnabled = false
+        //        routerIP = ipList[tableView.selectedRowIndexes.map { Int($0) }[0]]
+        routerIP = getRouterIP()
         tableView.reloadData()
     }
     
     @IBAction func attackButtonPressed(_ sender: NSButton) {
-        currentDevices = getIPsFromRowIndexes()
-//        print(currentDevices)
+        for (_,ip) in getIPsFromRowIndexes().enumerated(){
+            currentDevices.append(ip)
+        }
+        print(currentDevices)
+        //        currentDevices = getIPsFromRowIndexes()
+        //        print(currentDevices)
         tableView.reloadData()
         attackUsers()
         stopAttacksButton.isEnabled = true
         attackButton.isEnabled = false
-        setRouterButton.isEnabled = false
         wifiKillerModeSwitch.isEnabled = false
     }
     
@@ -203,32 +210,60 @@ class ViewController: NSViewController {
         }
     }
     
+    @IBAction func tcpdumpButtonPressed(_ sender: Any) {
+        //        getTcpdump()
+        
+    }
     
-
+    
+    func getTcpdump(){
+        let task = Process.init()
+        let pipe = Pipe.init()
+        task.launchPath = "/bin/bash"
+        task.arguments = ["--login",location+"/Sarin/sarin_scripts/tcpdumpCreds.sh",keychain[NSUserName()]] as? [String]
+        task.standardOutput = pipe
+        task.launch()
+        let group = DispatchGroup()
+        group.enter()
+        DispatchQueue.global().async {
+            task.waitUntilExit()
+            group.leave()
+        }
+        group.notify(queue: .main){
+            
+            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            let output = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+            self.tcpdumpView.string = output as! String
+        }
+        
+        //        print(self.tcpdump)
+    }
+    
+    
+    
 }
+
 extension ViewController:NSTableViewDataSource,NSTableViewDelegate{
     
     fileprivate enum CellIdentifiers {
         static let ipCell = "ipCellID"
         static let macCell = "macCellID"
     }
-
+    
     
     func updateSelectionStatus(){
         let itemsSelected:Int = tableView.selectedRowIndexes.count
         
-//        print(tableView.selectedRowIndexes.map { Int($0) })
+        //        print(tableView.selectedRowIndexes.map { Int($0) })
         
         attackButton.title = "Attack Selected Devices " + "(" + String(itemsSelected) + ")"
         
         if (itemsSelected != 0){
-            setRouterButton.isEnabled = true
             if routerIP != ""{
                 attackButton.isEnabled = true
             }
         }else{
             attackButton.isEnabled = false
-            setRouterButton.isEnabled = false
         }
         
         
@@ -256,20 +291,20 @@ extension ViewController:NSTableViewDataSource,NSTableViewDelegate{
         if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "ipCellID"), owner: self) as? NSTableCellView {
             
             if currentDevices.contains(ipList[row]){
-//                print(currentDevices)
+                //                print(currentDevices)
                 
                 cell.textField?.textColor = NSColor.red
                 cell.textField?.stringValue = self.data[row]
-//                print(ipList[row])
+                //                print(ipList[row])
                 
                 return cell
             }
             if routerIP==ipList[row]{
-//                print(currentDevices)
+                //                print(currentDevices)
                 
                 cell.textField?.textColor = NSColor.systemBlue
                 cell.textField?.stringValue = self.data[row]
-//                print(ipList[row])
+                //                print(ipList[row])
                 
                 return cell
             }

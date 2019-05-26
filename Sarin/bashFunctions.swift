@@ -116,3 +116,21 @@ do shell script "sudo echo working
     
     return output! as String
 }
+
+func testscript(){
+    guard let path = Bundle.main.path(forResource: "echo",ofType:"sh") else {
+        print("Unable to locate BuildScript.command")
+        return
+    }
+    print(path)
+    let task = Process()
+    let pipe = Pipe()
+    task.launchPath = "/bin/bash"
+    task.arguments = [path]
+    task.standardOutput = pipe
+    task.launch()
+
+    
+    
+    
+}

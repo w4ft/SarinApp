@@ -20,7 +20,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        killall()
+        killall(process: "arpspoof")
+        killall(process: "tcpdump")
+        setPackets(state: "1")
     }
 }
 

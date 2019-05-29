@@ -297,6 +297,9 @@ class ViewController: NSViewController {
         }else{
             if isArp{
                 outputText.string = outputText.string + "\n########## DNSSPOOF STARTED ##########\n\n"
+                if apacheButton.state == .on{
+                    toggleApache(state: "start")
+                }
                 for (_,ip) in currentDevices.enumerated(){
                     dnsspoof(user: ip)
                 }
@@ -320,6 +323,9 @@ class ViewController: NSViewController {
             killall(process: "dnsspoof")
             attackSpinner.stopAnimation(self)
         }
+        if apacheButton.state == .on{
+            toggleApache(state: "stop")
+        }
         
     }
     
@@ -327,11 +333,9 @@ class ViewController: NSViewController {
         switch sender.state{
         case .on:
             isChecked = true
-            toggleApache(state: "start")
             UserDefaults.standard.set(isChecked, forKey: "isApacheChecked")
         case .off:
             isChecked = false
-            toggleApache(state: "stop")
             UserDefaults.standard.set(isChecked, forKey: "isApacheChecked")
         default:
             isChecked = false
@@ -346,18 +350,10 @@ class ViewController: NSViewController {
             startAttackButton.title = "Start tcpdump"
             dnsConfigureButton.isEnabled = false
             stopAttackButton.title = "Stop tcpdump"
-            if apacheButton.state == .on{
-                toggleApache(state: "stop")
-            }
-            
-            
         }
         if sender.identifier!.rawValue == "dnsspoof"{
             attack = "dnsspoof"
             dnsConfigureButton.isEnabled = true
-            if apacheButton.state == .on{
-                toggleApache(state: "start")
-            }
             startAttackButton.title = "Start dnsspoof"
             stopAttackButton.title = "Stop dnspoof"
         }

@@ -148,10 +148,11 @@ class dnsspoofConfigureViewController: NSViewController {
                     group.leave()
                 }
                 group.notify(queue: .main) {
-                    self.sucessCloneText.isHidden = false
+                
                     self.sucessCloneText.isHidden = false
                     self.sucessCloneText.textColor = NSColor.systemGreen
                     self.sucessCloneText.stringValue = "Fake site set to: " + siteLocationShort
+                    self.progressSpinner.stopAnimation(self)
                     self.showPreview()
                 }
                

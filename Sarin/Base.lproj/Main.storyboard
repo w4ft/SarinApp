@@ -871,11 +871,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="macCellID" id="8QX-KV-Br6">
-                                                            <rect key="frame" x="120" y="1" width="161" height="17"/>
+                                                            <rect key="frame" x="120" y="1" width="162" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KUE-5S-kNx">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="161" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="QrJ-An-pSw">
                                                                         <font key="font" metaFont="system"/>

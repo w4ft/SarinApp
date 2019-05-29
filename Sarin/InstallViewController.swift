@@ -52,7 +52,7 @@ class InstallViewController: NSViewController {
     func installDependencies(){
         let task = Process.init()
         task.launchPath = "/bin/bash"
-        task.arguments = ["--login",location+"/Sarin/sarin_scripts/installDependencies.sh"]
+        task.arguments = ["--login",location+"/Sarin/sarin_scripts/installDependencies.sh",location+"/ClonedSites",keychain[NSUserName()]] as? [String]
         task.launch()
         let group = DispatchGroup()
         group.enter()

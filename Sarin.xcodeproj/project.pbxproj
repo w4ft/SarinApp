@@ -13,6 +13,7 @@
 		9D24177E22908B87008FF3BF /* mainFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24177D22908B87008FF3BF /* mainFunctions.swift */; };
 		9D6089382299F2FB00EEFC25 /* echo.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9D6089372299F2FB00EEFC25 /* echo.sh */; };
 		9D60893C2299F71E00EEFC25 /* Script.command in Resources */ = {isa = PBXBuildFile; fileRef = 9D60893B2299F71E00EEFC25 /* Script.command */; };
+		9D60893E229A255F00EEFC25 /* dnsspoofConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D60893D229A255F00EEFC25 /* dnsspoofConfigureViewController.swift */; };
 		9D8C943A2290B97A00847F42 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C94392290B97A00847F42 /* PreferencesViewController.swift */; };
 		9D9A3033228B8999003A8739 /* bashFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9A3032228B8999003A8739 /* bashFunctions.swift */; };
 		9DD5BA87228E2A17000BEE54 /* ImportantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD5BA86228E2A17000BEE54 /* ImportantViewController.swift */; };
@@ -54,6 +55,7 @@
 		9D24177D22908B87008FF3BF /* mainFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainFunctions.swift; sourceTree = "<group>"; };
 		9D6089372299F2FB00EEFC25 /* echo.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = echo.sh; sourceTree = "<group>"; };
 		9D60893B2299F71E00EEFC25 /* Script.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.command; sourceTree = "<group>"; };
+		9D60893D229A255F00EEFC25 /* dnsspoofConfigureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dnsspoofConfigureViewController.swift; sourceTree = "<group>"; };
 		9D8C94392290B97A00847F42 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		9D9A3032228B8999003A8739 /* bashFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bashFunctions.swift; sourceTree = "<group>"; };
 		9DD5BA86228E2A17000BEE54 /* ImportantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				9D60893A2299F3C100EEFC25 /* Scripts */,
+				9D60893D229A255F00EEFC25 /* dnsspoofConfigureViewController.swift */,
 				9DD62D1922885C4800FA3CAA /* AppDelegate.swift */,
 				9DD62D1B22885C4800FA3CAA /* ViewController.swift */,
 				9DD5BA86228E2A17000BEE54 /* ImportantViewController.swift */,
@@ -439,6 +442,7 @@
 				9DD62D46228860B300FA3CAA /* WelcomeViewController.swift in Sources */,
 				9DD62D1A22885C4800FA3CAA /* AppDelegate.swift in Sources */,
 				9DFC9AB7228B705C0023779B /* SetupViewController.swift in Sources */,
+				9D60893E229A255F00EEFC25 /* dnsspoofConfigureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

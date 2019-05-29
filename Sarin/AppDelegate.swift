@@ -22,7 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         killall(process: "arpspoof")
         killall(process: "tcpdump")
-        setPackets(state: "1")
+        toggleApache(state: "stop")
+    
     }
 }
 

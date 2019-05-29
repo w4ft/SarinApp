@@ -14,12 +14,23 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        isArp = false
         
+        NotificationCenter.default.addObserver(self, selector: #selector(viewDidAppear), name: NSNotification.Name(rawValue: "load"), object: nil)
+        
+        dnsConfigureButton.isEnabled = false
+        
+        macLabel.isHidden = true
+        isChecked = UserDefaults.standard.bool(forKey: "isApacheChecked")
+        if isChecked{
+            apacheButton.state = .on
+        }else{
+            apacheButton.state = .off
+        }
+        isArp = false
         outputText.usesFindBar = true
         startARPButton.isEnabled = false
         stopARPButton.isEnabled = false
-        
+        outputText.string = getTodayString() + " Sarin Console: \n"
         tableView.delegate = self
         tableView.dataSource = self
         //        hasBeenSetup = false
@@ -29,13 +40,22 @@ class ViewController: NSViewController {
         }
     }
     
-    override var representedObject: Any? {
-        didSet {
-            // Update the view, if already loaded.
+    override func viewDidAppear() {
+        if helpIsEnabled{
+            arpHelpButton.isHidden = false
+            macHelpButton.isHidden = false
+            miscHelpButton.isHidden = false
+        }else{
+            arpHelpButton.isHidden = true
+            macHelpButton.isHidden = true
+            miscHelpButton.isHidden = true
         }
     }
     
+    
     //MARK: Outlets
+    @IBOutlet weak var dnsConfigureButton: NSButton!
+    @IBOutlet weak var scanLanButton: NSButton!
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var arpProgressSpinner: NSProgressIndicator!
     @IBOutlet weak var startARPButton: NSButton!
@@ -46,10 +66,19 @@ class ViewController: NSViewController {
     @IBOutlet weak var stopAttackButton: NSButton!
     @IBOutlet weak var wifiKillerModeSwitch: NSButton!
     @IBOutlet weak var configureAttackbutton: NSButton!
+    @IBOutlet weak var apacheButton: NSButton!
+    @IBOutlet weak var macTextField: NSTextField!
+    
+    @IBOutlet weak var macLabel: NSTextField!
+    
+    @IBOutlet weak var macHelpButton: NSButton!
+    @IBOutlet weak var arpHelpButton: NSButton!
+    @IBOutlet weak var miscHelpButton: NSButton!
     
     //MARK: Variables
     var hasBeenSetup:Bool = defaults.bool(forKey: "isInstalled")
     var data:[String] = []
+    var isChecked: Bool = false
     var tcpdump:String = ""
     var attack:String = "tcpdump"
     var scanDict = ["ip1": "mac1","ip2": "mac2","ip3": "mac3"]
@@ -96,6 +125,48 @@ class ViewController: NSViewController {
         }
     }
     
+    func getTodayString() -> String{
+        
+        let date = Date()
+        let calender = Calendar.current
+        let components = calender.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+        
+        let year = components.year
+        let month = components.month
+        let day = components.day
+        let hour = components.hour
+        let minute = components.minute
+        let second = components.second
+        
+        let today_string = String(year!) + "-" + String(month!) + "-" + String(day!) + " " + String(hour!)  + ":" + String(minute!) + ":" +  String(second!)
+        
+        return today_string
+        
+    }
+    
+    @IBAction func generateMAC(_ sender: NSButton) {
+        macTextField.stringValue = executeBashWithOutput(scriptLocation: location+"/Sarin/sarin_scripts/generateMAC.sh", param1: "")
+    }
+    
+    
+    @IBAction func setMAC(_ sender: NSButton) {
+        let task = Process.init()
+        task.launchPath = "/bin/bash"
+        task.arguments = ["--login",location+"/Sarin/sarin_scripts/MACspoof.sh",macTextField.stringValue,keychain[NSUserName()]!]
+        task.launch()
+        let group = DispatchGroup()
+        group.enter()
+        DispatchQueue.global().async {
+            task.waitUntilExit()
+            group.leave()
+        }
+        group.notify(queue: .main) {
+            self.macLabel.isHidden = false
+        }
+    }
+    
+    
+    
     //MARK: Scan Lan Function
     func scanLAN(){
         let task = Process.init()
@@ -133,6 +204,10 @@ class ViewController: NSViewController {
     }
     lazy var SetupViewController: NSViewController = {
         return self.storyboard!.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("WelcomeViewController"))
+            as! NSViewController
+    }()
+    lazy var dnsspoofConfigureViewController: NSViewController = {
+        return self.storyboard!.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("dnsspoof"))
             as! NSViewController
     }()
     
@@ -213,26 +288,29 @@ class ViewController: NSViewController {
         if (attack == "tcpdump"){
             if isArp{
                 attackSpinner.startAnimation(self)
-                outputText.string = outputText.string + "\n########## TCPDUMP STARTED ##########\n"
+                outputText.string = outputText.string + "\n########## TCPDUMP STARTED ##########\n\n"
                 tcpdumpCred()
             }else{
-                outputText.string = outputText.string + "\n########## NO ARPSPOOF PROCESS FOUND...TERMINATING ##########\n"
+                outputText.string = outputText.string + "\n########## NO ARPSPOOF PROCESS FOUND...TERMINATING ##########\n\n"
             }
             
         }else{
             if isArp{
-                outputText.string = outputText.string + "\n########## DNSSPOOF STARTED ##########\n"
+                outputText.string = outputText.string + "\n########## DNSSPOOF STARTED ##########\n\n"
                 for (_,ip) in currentDevices.enumerated(){
                     dnsspoof(user: ip)
                 }
                 attackSpinner.startAnimation(self)
             }else{
-                outputText.string = outputText.string + "\n########## NO ARPSPOOF PROCESS FOUND...TERMINATING ##########\n"
+                outputText.string = outputText.string + "\n########## NO ARPSPOOF PROCESS FOUND...TERMINATING ##########\n\n"
             }
 
         }
     }
     
+    @IBAction func configureButtonPressed(_ sender: NSButton) {
+        self.presentAsSheet(dnsspoofConfigureViewController)
+    }
     @IBAction func stopAttackButtonPressed(_ sender: Any) {
         outputText.string = outputText.string + "\n********** STOPPED **********\n"
         if (attack == "tcpdump"){
@@ -245,16 +323,41 @@ class ViewController: NSViewController {
         
     }
     
+    @IBAction func apacheServerButton(_ sender: NSButton) {
+        switch sender.state{
+        case .on:
+            isChecked = true
+            toggleApache(state: "start")
+            UserDefaults.standard.set(isChecked, forKey: "isApacheChecked")
+        case .off:
+            isChecked = false
+            toggleApache(state: "stop")
+            UserDefaults.standard.set(isChecked, forKey: "isApacheChecked")
+        default:
+            isChecked = false
+        }
+    }
+
+    
     @IBAction func chooseAttack(_ sender: NSButton) {
         
         if sender.identifier!.rawValue == "tcpdump"{
             attack = "tcpdump"
             startAttackButton.title = "Start tcpdump"
+            dnsConfigureButton.isEnabled = false
             stopAttackButton.title = "Stop tcpdump"
+            if apacheButton.state == .on{
+                toggleApache(state: "stop")
+            }
+            
             
         }
         if sender.identifier!.rawValue == "dnsspoof"{
             attack = "dnsspoof"
+            dnsConfigureButton.isEnabled = true
+            if apacheButton.state == .on{
+                toggleApache(state: "start")
+            }
             startAttackButton.title = "Start dnsspoof"
             stopAttackButton.title = "Stop dnspoof"
         }
@@ -282,6 +385,8 @@ class ViewController: NSViewController {
             if data.count > 0 {
                 if let str = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
                     self.outputText.string = self.outputText.string + (str as String)}
+                
+                self.outputText.scrollToEndOfDocument(nil)
                 outHandle.waitForDataInBackgroundAndNotify()
             } else {
                 print("EOF on stdout from process")

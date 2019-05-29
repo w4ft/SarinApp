@@ -20,6 +20,7 @@ class ImportantViewController: NSViewController {
     @IBOutlet weak var notInstalledText: NSTextField!
     @IBOutlet weak var homebrewText: NSTextField!
     @IBOutlet weak var xcodeText: NSTextField!
+    
     lazy var SetupViewController: NSViewController = {
         return self.storyboard!.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("SetupViewController"))
             as! NSViewController

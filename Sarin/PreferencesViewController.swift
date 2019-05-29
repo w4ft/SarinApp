@@ -32,6 +32,30 @@ class PreferencesViewController: NSViewController {
 
     }
     
+    @IBOutlet weak var toggleHelpButton: NSButton!
+    
+    @IBAction func toggleHelpButtonPressed(_ sender: Any){
+        
+        print(helpIsEnabled)
+        
+        if helpIsEnabled{
+            toggleHelpButton.title = "Show Help Buttons"
+            helpIsEnabled = false
+            
+//        dnsspoofConfigureViewController().viewDidAppear()
+        }else{
+            toggleHelpButton.title = "Hide Help Buttons"
+            helpIsEnabled = true
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+//        dnsspoofConfigureViewController().viewDidAppear()
+        }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+        
+        
+    }
+    
+    
     
     @IBAction func resetDeafultsPressed(_ sender: Any) {
         let task = Process.init()

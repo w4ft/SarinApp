@@ -84,4 +84,24 @@ func getRouterIP () -> String{
     return ip
 }
 
+func toggleApache(state:String){
+    let task = Process.init()
+    let pipe = Pipe.init()
+    task.launchPath = "/bin/bash"
+    task.arguments = ["--login",location+"/Sarin/sarin_scripts/apache.sh",state, keychain[NSUserName()]] as? [String]
+    task.standardOutput = pipe
+    task.launch()
+    let group = DispatchGroup()
+    group.enter()
+    DispatchQueue.global().async {
+        task.waitUntilExit()
+        group.leave()
+    }
+}
+
+var helpIsEnabled: Bool = true
+
+
+
+
 

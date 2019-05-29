@@ -1,6 +1,6 @@
 # Sarin App - Sarin for MacOS: Beginner's Network Penetration Testing GUI (Dsniff)
 ## App Icon
-![Dark Mode](https://i.imgur.com/u5goVIx.png)
+![Dark Mode](https://i.imgur.com/a5G2x81.png)
 ## Dark mode
 ![Dark Mode](https://i.imgur.com/7oYbA9l.png)
 ![Dark Mode2](https://i.imgur.com/XVifik0.png)

@@ -1,6 +1,9 @@
 # SarinApp - Work in Progress
 Sarin for MacOS: Beginner's Network Penetration Testing GUI (Dsniff)
 
+![alt text](https://imgur.com/a/opj2DQe)
+![alt text](https://imgur.com/a/gcEA2yf)
+
 ## Features:
 - Scan LAN for devices
 - ARP poison devices
@@ -11,6 +14,7 @@ Sarin for MacOS: Beginner's Network Penetration Testing GUI (Dsniff)
  - Website cloning with httrack
 - TCP dumping
   - Password sniffing
+- Change your MAC address
 - Help tips for beginners and experts alike
 
 ## Dependencies and used programs:
@@ -25,5 +29,5 @@ Sarin for MacOS: Beginner's Network Penetration Testing GUI (Dsniff)
   - libpcap 
   - openssl 
 
-## Used Swift Libraries::
+## Used Swift Libraries:
 - [Keychain Access](https://github.com/kishikawakatsumi/KeychainAccess)

@@ -8,8 +8,8 @@ Please use Sarin for educational use and/or good intentions. Conducting network 
 - [Features](#Features)
 - [Screenshots](#Screenshots)
 - [How to use](# "How to use")
-- [Dependencies and used programs](# Dependencies and used programs)
-- [Used Swift Libraries](# Used Swift Libraries)
+- [Dependencies and used programs](# "Dependencies and used programs")
+- [Used Swift Libraries](# "Used Swift Libraries")
 
 ## Features:
 - Automatically installs necesarry programs, dependencies, and scripts.

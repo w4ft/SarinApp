@@ -33,6 +33,7 @@ Please use Sarin for educational use and/or good intentions. Conducting network 
 ![Light Mode](https://i.imgur.com/d3kFdJH.png)
 
 ## How to use:
+- Follow install prompts on first time opening app.
 - "Scan LAN" to generate list of devices on your current network. Select devices by clicking on them (batch selection allowed)
 - "Poison Selected Devices" to conduct an ARP man in the middle attack on the devices. From here, you can specifify a DNS Spoof attack or TCP Dump.
 - Select "TCP Dump" and click "Start TCP Dump" to start collecting packets routed from the target, through your device, to the router. Once the user visits a vulnerable site and enters in their login credentials, Sarin will pick it up and display the captured information in the console. Use the cmd+f (search) to look for the keyword "pass", "password", etc. Different sites use different keywords.

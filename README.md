@@ -31,6 +31,7 @@ Please use Sarin for educational use and/or good intentions. Conducting network 
 ![Dark Mode2](https://i.imgur.com/XVifik0.png)
 ### Light mode
 ![Light Mode](https://i.imgur.com/d3kFdJH.png)
+![Light Mode](https://i.imgur.com/MUVix8Z.png)
 
 ## How to use:
 - Follow install prompts on first time opening app.

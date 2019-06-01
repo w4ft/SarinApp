@@ -1,6 +1,8 @@
 # Sarin App - Sarin for MacOS: Beginner's Network Penetration Testing GUI (Dsniff)
 ![AppIcon](https://i.imgur.com/a5G2x81.png)
 
+{:toc}
+
 ## Features:
 - Automatically installs necesarry programs, dependencies, and scripts.
 - Scan LAN for devices
@@ -8,7 +10,7 @@
   - Cut off any device's conenction to the router
   - Conduct MITM attacks
 - DNS spoofing
-  - Redirect victim's to your locally hosted website
+  - Redirect victims to your locally hosted website
  - Website cloning with httrack
 - TCP dumping
   - Password sniffing

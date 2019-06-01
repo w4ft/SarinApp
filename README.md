@@ -1,7 +1,8 @@
 # Sarin App - Sarin for MacOS: Beginner's Network Penetration Testing GUI (Dsniff)
-![Dark Mode](https://i.imgur.com/a5G2x81.png)
+![AppIcon](https://i.imgur.com/a5G2x81.png)
 
 ## Features:
+- Automatically installs necesarry programs, dependencies, and scripts.
 - Scan LAN for devices
 - ARP poison devices
   - Cut off any device's conenction to the router

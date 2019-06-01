@@ -5,11 +5,11 @@
 Please use Sarin for educational use and/or good intentions. Conducting network attacks on public wifi or on non-consenting devices is illegal and not condoned by Sarin.
 
 ## Table of Contents
-- [Features](#Features)
-- [Screenshots](#Screenshots)
-- [How to use](# How-to-use)
-- [Dependencies and used programs](# Dependencies-and-used-programs)
-- [Used Swift Libraries](# "Used Swift Libraries")
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [How to use](#how-to-use)
+- [Dependencies and used programs](#dependencies-and-used-programs)
+- [Used Swift Libraries](#used-swift-libraries)
 
 ## Features:
 - Automatically installs necesarry programs, dependencies, and scripts.

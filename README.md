@@ -7,8 +7,8 @@ Please use Sarin for educational use and/or good intentions. Conducting network 
 ## Table of Contents
 - [Features](#Features)
 - [Screenshots](#Screenshots)
-- [How to use](# "How to use")
-- [Dependencies and used programs](# "Dependencies and used programs")
+- [How to use](# How-to-use)
+- [Dependencies and used programs](# Dependencies-and-used-programs)
 - [Used Swift Libraries](# "Used Swift Libraries")
 
 ## Features:

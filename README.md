@@ -1,7 +1,7 @@
 # Sarin App - Sarin for MacOS: Beginner's Network Penetration Testing GUI (Dsniff)
 ![AppIcon](https://i.imgur.com/a5G2x81.png)
 
-{:toc}
+[Test](#Features)
 
 ## Features:
 - Automatically installs necesarry programs, dependencies, and scripts.
